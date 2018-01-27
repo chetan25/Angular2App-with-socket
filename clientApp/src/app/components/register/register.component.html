@@ -1,0 +1,52 @@
+<h2 class="page-header header-margin">Register</h2>
+<form novalidate  (submit)="onRegister()" [formGroup]="registrationForm">
+  <div clas="form-group">
+	  <label>Name</label>
+	  <input
+      type="text"
+      formControlName="name"
+      name="name"
+      class="form-control"
+      [ngClass]="{'has-error': registrationForm.get('name').hasError('required') && formSubmitted}"
+    >
+  </div>
+  <div clas="form-group">
+    <label>UserName</label>
+	  <input
+      type="text"
+      formControlName="userName"
+      name="userName"
+      class="form-control"
+      [ngClass]="{'has-error': registrationForm.get('userName').hasError('required') && formSubmitted}"
+    >
+  </div>
+  <div clas="form-group">
+	  <label>Email</label>
+	  <input
+      type="text"
+      formControlName="email"
+      name="email"
+      class="form-control"
+      [ngClass]="{'has-error': registrationForm.get('email').hasError('required') && formSubmitted}"
+    >
+  </div>
+  <div clas="form-group">
+	  <label>Password</label>
+	  <input
+      type="password"
+      formControlName="password" 
+      name="password"
+      class="form-control"
+      [ngClass]="{'has-error': registrationForm.get('password').hasError('required') && formSubmitted}"
+    >
+  </div>
+  <input
+    type="submit"
+    class="btn btn-primary margin-btn"
+    value="Submit"
+    [disabled]="!registrationForm.dirty"
+  >
+</form>
+<div class="flash-error">
+  <flash-messages></flash-messages>
+</div>

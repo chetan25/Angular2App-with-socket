@@ -1,0 +1,57 @@
+<div
+  *ngIf ="slides.length >0"
+  id="carousel-example-generic"
+  class="carousel slide margin-carousel"
+  data-ride="carousel"
+>
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li
+          *ngFor="let slide of slides; let i = index"
+          data-target="#carousel-example-generic"
+          [attr.data-slide-to]="i"
+          [ngClass]="{'active': i == 0}"
+        ></li>
+    </ol>
+
+  <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+	    <div
+	      *ngFor="let data of slideData; let i = index" 
+	      class="item item-container"
+	      [ngClass]="{'active': i == 0}"
+	    >
+	        <!-- <img src="..." alt=""> -->
+	        <div class="carousel-caption">
+		        <h3>{{ data.header }}</h3>
+		        <p>{{ data.description }}</p>
+		    </div>
+	    </div>
+    </div>
+
+    <!-- Controls -->
+    <a
+      class="left carousel-control"
+      href="#carousel-example-generic"
+      role="button"
+      data-slide="prev"
+    >
+        <span
+          class="glyphicon glyphicon-chevron-left"
+          aria-hidden="true"
+        ></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a
+      class="right carousel-control"
+      href="#carousel-example-generic"
+      role="button" data-slide="next"
+    >
+        <span
+          class="glyphicon glyphicon-chevron-right"
+          aria-hidden="true"
+        ></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+

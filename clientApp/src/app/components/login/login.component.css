@@ -1,0 +1,12 @@
+.header-margin {
+  margin-top: 7rem !important;
+}
+.margin-btn {
+  margin-top: 1rem !important;	
+}
+.has-error {
+  border-color: red;	
+}
+.flash-error {
+  margin-top: 2rem;
+}

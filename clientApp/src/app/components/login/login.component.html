@@ -1,0 +1,32 @@
+<h2 class="page-header header-margin">Login</h2>
+<form novalidate [formGroup]="loginForm" (submit)="onSubmit()">
+  <div clas="form-group">
+	<label>UserName</label>
+	<input
+	  type="text"
+	  name="userName"
+	  formControlName="userName"
+    class="form-control"
+    [ngClass]="{'has-error': loginForm.get('userName').hasError('required') && formSubmitted}"
+	>
+  </div>
+  <div clas="form-group">
+    <label>Password</label>
+	<input
+	  type="password"
+	  name="password"
+	  formControlName="password"
+	  class="form-control"
+	  [ngClass]="{'has-error': loginForm.get('password').hasError('required') && formSubmitted}"
+	>
+  </div>
+  <input
+    type="submit"
+    class="btn btn-primary margin-btn"
+    value="Submit"
+    [disabled]="!loginForm.dirty"
+  >
+</form>
+<div class="flash-error">
+  <flash-messages></flash-messages>
+</div>

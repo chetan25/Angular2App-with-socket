@@ -1,0 +1,32 @@
+.todo-completed-icon, .todo-not-completed-icon{
+ position: absolute;
+ right: 3rem;
+ margin-top: 26.2rem !important;
+}
+
+.todo-title {
+  margin-top: 0.5rem !important;
+}
+
+.todo-completed-icon {
+ color: green !important;
+}
+
+.todo-not-completed-icon {
+ color: red !important;
+}
+
+.todo-edit-icon {
+  float: right !important;
+}
+
+.thumbnail-height {
+  height: 30rem !important;
+  max-height: 30rem !important;
+}
+
+.todo-delete-icon {
+  position: absolute !important;
+  margin-top: 26.2rem !important;
+  left: 3rem !important;
+}

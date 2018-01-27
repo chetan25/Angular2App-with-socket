@@ -1,0 +1,21 @@
+<div *ngIf="users">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      Logged In Users
+    </div>
+    <div class="panel-body">
+      <div class="list-group">
+        <button
+          type="button"
+          class="list-group-item"
+          *ngFor="let user of users"
+          (click)="openChat(user)"
+        >{{ user.userName }}</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="flash-success">
+  <flash-messages></flash-messages>
+</div>

@@ -1,0 +1,32 @@
+{
+  "name": "angulmybasicapp",
+  "version": "1.0.0",
+  "description": "this is the first basic app using angular2, express and mongodb",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.76",
+    "@types/moment": "^2.13.0",
+    "angular2-jwt": "^0.2.3",
+    "angular2-moment": "^1.6.0",
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "cors": "*",
+    "express": "*",
+    "jquery": "^3.2.1",
+    "jsonwebtoken": "*",
+    "lodash": "^4.17.4",
+    "mongoose": "*",
+    "passport": "*",
+    "passport-jwt": "*",
+    "socket.io": "latest"
+  },
+  "author": "chetan dasauni",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jquery": "^3.2.10"
+  }
+}

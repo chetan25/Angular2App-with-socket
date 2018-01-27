@@ -1,0 +1,28 @@
+.flash-success {
+ position: fixed;
+ z-index: 1000;
+ width: 50%;
+ bottom:0;
+ left:50%;
+}
+
+.top-margin {
+  margin-top: 2rem !important;
+}
+
+.completed-checkbox {
+  height: 4rem !important;
+  margin-top: 2rem !important;
+}
+
+.description-textarea {
+  min-height: 13rem !important;
+}
+
+.todo-list-container {
+  margin-top: -4rem;
+}
+
+.todo-wrapper { 
+  margin-top: 2rem;
+}

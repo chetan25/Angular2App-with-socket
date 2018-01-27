@@ -1,0 +1,31 @@
+<!-- caraousel starts-->
+<div>
+  <app-carousel-component
+    [slideCount]="2"
+    [slideData]="slideData"
+  ></app-carousel-component>
+</div>
+<!-- carousel ends -->
+<div class="nested-links-wrapper">
+  <ul class="nav nav-pills">
+    <li
+      role="presentation"
+      [routerLinkActive]="['active']"
+      [routerLinkActiveOptions]="{exact: true}"
+    >
+      <a [routerLink]="['todo']">TODO's</a>
+    </li>
+    <li
+      role="presentation"
+      [routerLinkActive]="['active']"
+      [routerLinkActiveOptions]="{exact: true}"
+    >
+      <a [routerLink]="['chat']">
+        Users
+      </a>
+    </li>
+  </ul>	
+</div>
+<div class="router-wrapper">
+  <router-outlet></router-outlet>
+</div>

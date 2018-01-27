@@ -1,0 +1,163 @@
+<div class="flash-success">
+    <flash-messages></flash-messages>
+</div>
+<!-- if length of todo is 0 -->
+<div *ngIf="todos.length === 0">
+    <div class="row">
+        <div class="col-sm-12 col-md-12">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h3>Welcome, {{ user['name'] }}</h3>
+                    <p>Seems like you are new to this site,
+                     start exploring by adding your first Todo.
+                    </p>
+                    <p>
+                        <button
+                          class="btn btn-primary"
+                          type="button"
+                          (click)="openAddTodoModal()"
+                        >Add Todo</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- if length of todo is greater than 0 -->
+<div *ngIf="todos.length > 0" class="todo-list-container">
+    <div>
+        <button
+          class="btn btn-primary"
+          type="button"
+          (click)="openAddTodoModal()"
+        >Add Todo</button>
+        <button
+          class="btn btn-primary"
+          type="button"
+          (click)="sortTodoByDate()"
+        >{{ sortOrder ? 'Oldest' : 'Newest' }}</button>
+    </div>
+    <div *ngFor="let row of rows; let i = index" class="todo-wrapper">
+        <div class="row">
+        	  <app-todo-list-item
+            	*ngFor="let item of [0,1,2,3]"
+            	[todoIndex]="4*i + item"
+            	[todolist]="todos[4*i + item]"
+            	(onTodoEdit)="todoEdit($event)"
+            	(onTodoDelete)="todoDelete($event)"
+              (onShowDetails)="todoShowDetails($event)"
+        	  ></app-todo-list-item>
+	      </div>
+    </div>
+</div>  
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="myModal" #myModal
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="myModalLabel"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        ><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">{{ modalTitle }}</h4>
+      </div>
+      <div class="modal-body">
+        <div class="input-group input-group-sm">
+          <span class="input-group-addon" id="sizing-addon1">Title</span>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Title"
+            aria-describedby="sizing-addon1"
+            [(ngModel)]="todoTitle"
+          >
+        </div>
+        <div class="input-group input-group-sm top-margin">
+          <span class="input-group-addon" id="sizing-addon1">Description</span>
+          <textarea
+            class="form-control description-textarea"
+            placeholder="Description"
+            aria-describedby="sizing-addon1"
+            [(ngModel)]="todoDescription"
+          ></textarea>
+        </div>
+        <div class="input-group input-group-sm top-margin">
+          <span class="input-group-addon" id="sizing-addon1">Completed</span>
+          <input
+            type="checkbox"
+            class="form-control completed-checkbox"
+            placeholder="Completed"
+            aria-describedby="sizing-addon1"
+            [(ngModel)]="todoCompleted"
+          >
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          *ngIf="modalAction == 'edit'"
+          (click)="saveEditTodo()"
+        >Save changes</button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          *ngIf="modalAction == 'add'"
+          (click)="addTodo()"
+        >Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- modal --> 
+<div
+  class="modal fade"
+  id="showDetailModal" #showDetailModal
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="showDetailModalLabel"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" *ngIf="todos && todos[selectedIndex]">
+      <div class="modal-header">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        ><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="showDetailModalLabel">ToDo Details</h4>
+      </div>
+      <div class="modal-body">
+        <div class="page-header">
+          <h3>Title: <small>{{ todos[selectedIndex].title }}</small></h3>
+        </div>
+        <div class="page-header">
+          <h3>Description: <small>{{ todos[selectedIndex].description }}</small></h3>
+        </div>
+        <div class="page-header">
+          <h3>Creation Date: <small>{{ todos[selectedIndex].createdOn }}</small></h3>
+        </div>
+        <div class="page-header">
+          <h3>Completed: <small>{{ todos[selectedIndex].completed }}</small></h3>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
