@@ -40,7 +40,7 @@ router.post('/login', (req, res, next) => {
               if (err) throw err;
 
                if  (isMatch) {
-	           	  const token = jwt.sign(user, config.secret, {
+	           	  const token = jwt.sign(user.toJSON(), config.secret, {
 	           	    expiresIn: 3600
 	              });
 	              res.json({success: true, token: "JWT " + token, user: {

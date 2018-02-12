@@ -6,9 +6,8 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 
-export class DashboardComponent implements OnInit, OnDestroy {
+export class DashboardComponent {
   slideData:Array<any>;
-  user:Array<any>;
   constructor() {
     //set the data for carousel
     this.slideData = [
@@ -21,12 +20,5 @@ export class DashboardComponent implements OnInit, OnDestroy {
         description: 'Add Todo anytime.'
       }
     ];
-  }
-
-  ngOnInit() {
-    this.user = JSON.parse(localStorage.getItem("user"));
-  }
-    
-  ngOnDestroy() {
   }
 }

@@ -1,56 +1,62 @@
-<div class="flash-success">
+<div *ngIf="userId">
+  <div class="flash-success">
     <flash-messages></flash-messages>
-</div>
-<!-- if length of todo is 0 -->
-<div *ngIf="todos.length === 0">
+  </div>
+  <!-- if length of todo is 0 -->
+  <div *ngIf="todos.length === 0">
     <div class="row">
-        <div class="col-sm-12 col-md-12">
-            <div class="thumbnail">
-                <div class="caption">
-                    <h3>Welcome, {{ user['name'] }}</h3>
-                    <p>Seems like you are new to this site,
-                     start exploring by adding your first Todo.
-                    </p>
-                    <p>
-                        <button
-                          class="btn btn-primary"
-                          type="button"
-                          (click)="openAddTodoModal()"
-                        >Add Todo</button>
-                    </p>
-                </div>
-            </div>
+      <div class="col-sm-12 col-md-12">
+        <div class="thumbnail">
+          <div class="caption">
+            <h3>Welcome, {{ user['name'] }}</h3>
+            <p>Seems like you are new to this site,
+               start exploring by adding your first Todo.
+            </p>
+            <p>
+              <button
+                class="btn btn-primary"
+                type="button"
+                (click)="openAddTodoModal()"
+              >Add Todo</button>
+            </p>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-<!-- if length of todo is greater than 0 -->
-<div *ngIf="todos.length > 0" class="todo-list-container">
+  </div>
+  <!-- if length of todo is greater than 0 -->
+  <div
+    *ngIf="todos.length > 0" class="todo-list-container"
+  >
     <div>
-        <button
-          class="btn btn-primary"
-          type="button"
-          (click)="openAddTodoModal()"
-        >Add Todo</button>
-        <button
-          class="btn btn-primary"
-          type="button"
-          (click)="sortTodoByDate()"
-        >{{ sortOrder ? 'Oldest' : 'Newest' }}</button>
+      <button
+        class="btn btn-primary"
+        type="button"
+        (click)="openAddTodoModal()"
+      >Add Todo</button>
+      <button
+        class="btn btn-primary"
+        type="button"
+        (click)="sortTodoByDate()"
+      >{{ sortOrder ? 'Oldest' : 'Newest' }}</button>
     </div>
-    <div *ngFor="let row of rows; let i = index" class="todo-wrapper">
-        <div class="row">
-        	  <app-todo-list-item
-            	*ngFor="let item of [0,1,2,3]"
-            	[todoIndex]="4*i + item"
-            	[todolist]="todos[4*i + item]"
-            	(onTodoEdit)="todoEdit($event)"
-            	(onTodoDelete)="todoDelete($event)"
-              (onShowDetails)="todoShowDetails($event)"
-        	  ></app-todo-list-item>
-	      </div>
+    <div
+      *ngFor="let row of rows; let i = index"
+      class="todo-wrapper"
+    >
+      <div class="row">
+        <app-todo-list-item
+          *ngFor="let item of [0,1,2,3]"
+          [todoIndex]="4*i + item"
+          [todolist]="todos[4*i + item]"
+          (onTodoEdit)="todoEdit($event)"
+          (onTodoDelete)="todoDelete($event)"
+          (onShowDetails)="todoShowDetails($event)"
+        ></app-todo-list-item>
+  	  </div>
     </div>
-</div>  
-
+  </div>  
+</div>
 <!-- Modal -->
 <div
   class="modal fade"

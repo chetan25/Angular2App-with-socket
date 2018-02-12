@@ -5,6 +5,9 @@ import { FlashMessagesService } from 'angular2-flash-messages';
 import * as moment from 'moment';
 import { OrderByDatePipe } from '../../pipes/order-by-date.pipe';
 declare var $:any;
+import { Store } from '@ngrx/store';
+import { UserState, User } from '../../redux-states/user/user-state';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-todo-list',
@@ -13,6 +16,10 @@ declare var $:any;
   providers: [TodoDataService, OrderByDatePipe]
 })
 export class TodoListComponent implements OnInit {
+  user:any;
+  userId:number;
+  data$: Observable<User>;
+
   todos:Array<Todo> = [];
   todoSelectedIndex:number;
   todoTitle:string;
@@ -27,17 +34,25 @@ export class TodoListComponent implements OnInit {
   //this is for now defined in two places  
   description:string = 'A list of things that one wants to get done or that need to get done.These are prioritized lists of all the tasks that you need to carry out.';
   creationDate:string;
-  @Input() user:Array<any>;
   count: number;
   rows: Array<any>;
   obs;
   constructor(
     private todoDataService: TodoDataService,
     private flashMessagesService: FlashMessagesService,
-    private myFilter: OrderByDatePipe
-  ) { }
+    private myFilter: OrderByDatePipe,
+    private store: Store<UserState>
+  ) {
+    //Get user profile
+    this.data$ = this.store.select('user');
+    this.data$.subscribe((user:User) => {
+      console.log(user);
+    });
+  }
 
   ngOnInit() {
+     this.user = JSON.parse(localStorage.getItem("user"));
+    this.userId = this.user['userId'];
     this.creationDate = moment().subtract(1, 'days').format('DD/MM/YYYY');
     //get the list of all todo for user 1 from api or local storage
     if (localStorage.getItem("todos") === null) {

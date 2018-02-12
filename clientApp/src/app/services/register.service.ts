@@ -2,6 +2,11 @@ import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { tokenNotExpired } from 'angular2-jwt';
+import { Store } from '@ngrx/store';
+import { LOGIN, LOGOUT, UserActions } from '../redux-states/user/user-actions';
+import { UserState, User } from '../redux-states/user/user-state';
+import { SocketConnectionService } from './socket-connection.service';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class RegisterService {
@@ -9,13 +14,16 @@ export class RegisterService {
   user: any;
   testMode:boolean;
   url:string;
-  constructor(private http: Http) { 
-   this.testMode = true;
-   this.url = this.testMode ? 'http://localhost:3020/' : 'https://peaceful-wave-48941.herokuapp.com/';
+  userState$: Observable<UserState>;
+  constructor(
+    private http: Http,
+    private store: Store<UserState>,
+    private socket: SocketConnectionService
+  ) { 
+    this.testMode = true;
+    this.url = this.testMode ? 'http://localhost:3020/' : 'https://peaceful-wave-48941.herokuapp.com/';
   }
   
-  //for deployment remove 'http://localhost:3020/'
-
   /** 
   * Register user
   *
@@ -38,7 +46,7 @@ export class RegisterService {
   onLogin(user) { 
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-     
+
     return this.http.post(this.url + 'api/login', user, {headers: headers}).map(res => res.json());
   }
   
@@ -92,6 +100,26 @@ export class RegisterService {
   */
   loggedIn() {
     return tokenNotExpired('id_token');
+  }
+
+  /**
+  * join the user to the socket channel
+  * 
+  * @param {Object} logedUser
+  */
+  joinUserToChannel(logedUser) {
+    //join the socket channel
+    this.socket.joinChannel(logedUser); 
+  }
+
+  /**
+  * update the user store with the logged in user
+  *
+  * @param {Object} logedUser
+  */
+  addUserToStore(logedUser) {
+    //call store to store state
+    this.store.dispatch(new UserActions('LOGIN', logedUser));  
   }
 }
 

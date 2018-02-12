@@ -10,8 +10,6 @@ import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { TodoListItemComponent } from './components/todo-list-item/todo-list-item.component';
 import { CarouselComponentComponent } from './components/carousel-component/carousel-component.component';
 import { ChatComponent } from './components/chat/chat.component';
-import { TodoComponent } from './components/todo/todo.component';
-
 
 /**
 * Angular routes for front end views
@@ -23,7 +21,7 @@ const appRoutes: Routes = [
     {path: 'profile', component: DashboardComponent, canActivate: [AuthGaurdService],
       children: [
         {path:'', redirectTo: 'todo', pathMatch: 'full'},
-        {path: 'todo', component: TodoComponent},
+        {path: 'todo', component: TodoListComponent},
         {path: 'chat', component: ChatComponent}
       ]
     }

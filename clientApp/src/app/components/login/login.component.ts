@@ -1,15 +1,17 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { RegisterService } from '../../services/register.service';
-import {FlashMessagesService } from 'angular2-flash-messages';
+import { FlashMessagesService } from 'angular2-flash-messages';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators, FormBuilder }  from '@angular/forms';
-import { SocketConnectionService } from '../../services/socket-connection.service';
+import { Observable } from 'rxjs/Observable';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent implements OnInit, OnDestroy {
   formSubmitted = false;
   loginForm: FormGroup;
@@ -20,12 +22,11 @@ export class LoginComponent implements OnInit, OnDestroy {
   password = new FormControl("", Validators.required);
  
   constructor(
-    private  registerService: RegisterService,
+    private registerService: RegisterService,
     private flashMessagesService: FlashMessagesService,
     private router : Router,
-    private fb: FormBuilder,
-    private socket: SocketConnectionService
-  ) { 
+    private fb: FormBuilder
+  ) {
      this.loginForm = this.fb.group({
         "userName":this.userName,
         "password":this.password
@@ -62,9 +63,12 @@ export class LoginComponent implements OnInit, OnDestroy {
           'name': data.user.name,
           'email': data.user.email,
           'userId': data.user.id
-        } 
-        
-        this.socket.joinChannel(logedUser);
+        }  
+        //add a socket connection
+        this.registerService.joinUserToChannel(logedUser);
+        //add user to store
+        this.registerService.addUserToStore(logedUser);
+        //add to local storage
         this.registerService.storeLocalStorage(data.token, logedUser);
         this.router.navigate(['profile']);
       } else {
