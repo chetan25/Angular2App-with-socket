@@ -2,7 +2,6 @@
 /dist
 /tmp
 
-config/database.js
 readme.md
 
 # dependencies
