@@ -19,7 +19,7 @@ mongoose.connection.on('error', (err) => {
 
 const apiRoute = require('./routes/api');
 
-const testMode = true; 
+const testMode = false; 
 //port number for local
 const port = testMode ? 3020 : process.env.PORT || 8080;
 //const port = process.env.PORT || 3020;
