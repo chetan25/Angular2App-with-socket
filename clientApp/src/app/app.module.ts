@@ -15,6 +15,8 @@ import { UserValidateService } from './services/user-validate.service';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { StoreModule, Store } from '@ngrx/store';
 import { userReducer } from './redux-states/user/user-reducer';
+import { todoReducer } from './redux-states/todos/todo-reducer';
+import { loggedUserReducer } from './redux-states/chat-users/chat-users-reducer';
 
 //components
 import { AppRoutingModule } from './app-routing.module';
@@ -29,7 +31,6 @@ import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { TodoListItemComponent } from './components/todo-list-item/todo-list-item.component';
 import { CarouselComponentComponent } from './components/carousel-component/carousel-component.component';
 import { ChatComponent } from './components/chat/chat.component';
-import { TodoComponent } from './components/todo/todo.component';
 
 @NgModule({
   declarations: [
@@ -43,8 +44,7 @@ import { TodoComponent } from './components/todo/todo.component';
     TodoListComponent,
     TodoListItemComponent,
     CarouselComponentComponent,
-    ChatComponent,
-    TodoComponent
+    ChatComponent
   ],
   imports: [
     BrowserModule,
@@ -54,8 +54,10 @@ import { TodoComponent } from './components/todo/todo.component';
     AppRoutingModule,
     FlashMessagesModule.forRoot(),
     StoreModule.forRoot({ 
-      user: userReducer
-    }),
+      user: userReducer,
+      todos: todoReducer,
+      loggedUsers: loggedUserReducer
+    })
   ],
   providers: [
     UserValidateService,

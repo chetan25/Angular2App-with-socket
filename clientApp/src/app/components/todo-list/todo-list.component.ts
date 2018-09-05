@@ -43,18 +43,23 @@ export class TodoListComponent implements OnInit {
     private myFilter: OrderByDatePipe,
     private store: Store<UserState>
   ) {
-    //Get user profile
+    //Get user profile from store
+    //if store empty get from session.
     this.data$ = this.store.select('user');
     this.data$.subscribe((user:User) => {
+      this.user = user;
+      if (!user.userId) {
+        //grab from backend
+      }
       console.log(user);
     });
   }
 
   ngOnInit() {
-     this.user = JSON.parse(localStorage.getItem("user"));
+   // this.user = JSON.parse(localStorage.getItem("user"));
     this.userId = this.user['userId'];
     this.creationDate = moment().subtract(1, 'days').format('DD/MM/YYYY');
-    //get the list of all todo for user 1 from api or local storage
+    //get the list of all todo for user from api or local storage
     if (localStorage.getItem("todos") === null) {
       this.obs = this.todoDataService.getToDos(this.user['userId'])
         .subscribe(data => {

@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Todo } from '../models/todo';
+import { Store } from '@ngrx/store';
+// import { TodoState, Todo } from '../redux-states/todos/todo-state';
+import { ADD_TODO, DELETE_TODO, EDIT_TODO, TodoAction } from '../redux-states/todos/todo-actions';
 
 @Injectable()
 export class TodoDataService {

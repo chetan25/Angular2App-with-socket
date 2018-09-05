@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { UserState, User } from './user-state';
+import { UserState,User } from './user-state';
 
 export const LOGIN: string = 'LOGIN';
 export const LOGOUT: string = 'LOGOUT';

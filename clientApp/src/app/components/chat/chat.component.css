@@ -1,0 +1,15 @@
+.permission-granted-item {
+ background: aliceblue;	
+}
+
+.panel-text{
+ font-size: large;
+ font-weight: 600;
+ font-family: sans-serif;
+}
+
+.permission-granted-text {
+ float: right;
+ color: green;
+ padding-top: 1.5rem;
+}

@@ -7,16 +7,14 @@ const initialState:User = {
   email: null,
   userId: null,
 };
-
+ 
 export function userReducer(state:User = initialState, action: UserActions):User {
 	switch (action.type) {
 		case LOGIN:
-          console.log(action.payload, 'action');
-          console.log(state, 'state')
           // Create a new state from payload
           return Object.assign({}, state, action.payload);
 		case LOGOUT:
-		  return state;
+		  return Object.assign({}, initialState);
 		default:
 		  return state;
 	}
