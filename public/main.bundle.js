@@ -1605,7 +1605,7 @@ var RegisterService = /** @class */ (function () {
         this.store = store;
         this.socket = socket;
         this.testMode = false;
-        this.url = this.testMode ? 'http://localhost:3020/' : 'https://peaceful-wave-48941.herokuapp.com/';
+        this.url = this.testMode ? 'http://localhost:3020/' : 'https://share-todo.herokuapp.com/';
     }
     /**
     * Register user
@@ -1730,7 +1730,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var SocketConnectionService = /** @class */ (function () {
     function SocketConnectionService() {
         this.testMode = false;
-        this.url = this.testMode ? 'http://localhost:3020/' : 'https://peaceful-wave-48941.herokuapp.com/';
+        this.url = this.testMode ? 'http://localhost:3020/' : 'https://share-todo.herokuapp.com/';
     }
     /**
     * Return the connected socket
@@ -1851,7 +1851,7 @@ var TodoDataService = /** @class */ (function () {
     function TodoDataService(http) {
         this.http = http;
         this.testMode = false;
-        this.url = this.testMode ? 'http://localhost:3020/' : 'https://peaceful-wave-48941.herokuapp.com/';
+        this.url = this.testMode ? 'http://localhost:3020/' : 'https://share-todo.herokuapp.com/';
     }
     /**
      * Get Todos for user, by default for user 1

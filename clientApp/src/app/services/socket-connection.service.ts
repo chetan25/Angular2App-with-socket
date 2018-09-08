@@ -9,7 +9,7 @@ export class SocketConnectionService {
   private url;
   socket:SocketIOClient.Socket;
   constructor() { 
-    this.url = this.testMode ? 'http://localhost:3020/' : 'https://peaceful-wave-48941.herokuapp.com/';
+    this.url = this.testMode ? 'http://localhost:3020/' : 'https://share-todo.herokuapp.com/';
   }
 
   /**
