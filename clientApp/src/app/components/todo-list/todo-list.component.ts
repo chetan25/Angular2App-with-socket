@@ -49,9 +49,10 @@ export class TodoListComponent implements OnInit {
     this.data$.subscribe((user:User) => {
       this.user = user;
       if (!user.userId) {
-        //grab from backend
+        this.user.userId = localStorage.getItem("userId");
+        this.user.userName = localStorage.getItem("userName");
+        this.user.email = localStorage.getItem("userEmail");
       }
-      console.log(user);
     });
   }
 

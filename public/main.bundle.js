@@ -301,7 +301,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".text-header {\r\n  font-family: cursive;\r\n  color: darkcyan;\r\n  font-size: x-large;\r\n}\r\n.text-footer {\r\n  font-family: cursive;\r\n  color: darkcyan;\r\n  font-size: large;\t\r\n}", ""]);
 
 // exports
 
@@ -314,7 +314,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/card-component/card-component.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div\n  class=\"card card-outline-primary mb-3 text-center\"\n  *ngFor=\"let detail of details\"\n>\n    <div class=\"card-block\">\n        <blockquote class=\"card-blockquote\">\n            <p>{{ detail.description }}</p>\n            <footer>{{ detail.name }}</footer>\n        </blockquote>\n    </div>\n</div>"
+module.exports = "<div\n  class=\"card card-outline-primary mb-3 text-center\"\n  *ngFor=\"let detail of details\"\n>\n    <div class=\"card-block\">\n        <blockquote class=\"card-blockquote\">\n            <p class=\"text-header\">{{ detail.description }}</p>\n            <footer class=\"text-footer\">{{ detail.name }}</footer>\n        </blockquote>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -379,7 +379,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/carousel-component/carousel-component.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div\n  *ngIf =\"slides.length >0\"\n  id=\"carousel-example-generic\"\n  class=\"carousel slide margin-carousel\"\n  data-ride=\"carousel\"\n>\n    <!-- Indicators -->\n    <ol class=\"carousel-indicators\">\n        <li\n          *ngFor=\"let slide of slides; let i = index\"\n          data-target=\"#carousel-example-generic\"\n          [attr.data-slide-to]=\"i\"\n          [ngClass]=\"{'active': i == 0}\"\n        ></li>\n    </ol>\n\n  <!-- Wrapper for slides -->\n    <div class=\"carousel-inner\" role=\"listbox\">\n\t    <div\n\t      *ngFor=\"let data of slideData; let i = index\" \n\t      class=\"item item-container\"\n\t      [ngClass]=\"{'active': i == 0}\"\n\t    >\n\t        <!-- <img src=\"...\" alt=\"\"> -->\n\t        <div class=\"carousel-caption\">\n\t\t        <h3>{{ data.header }}</h3>\n\t\t        <p>{{ data.description }}</p>\n\t\t    </div>\n\t    </div>\n    </div>\n\n    <!-- Controls -->\n    <a\n      class=\"left carousel-control\"\n      href=\"#carousel-example-generic\"\n      role=\"button\"\n      data-slide=\"prev\"\n    >\n        <span\n          class=\"glyphicon glyphicon-chevron-left\"\n          aria-hidden=\"true\"\n        ></span>\n        <span class=\"sr-only\">Previous</span>\n    </a>\n    <a\n      class=\"right carousel-control\"\n      href=\"#carousel-example-generic\"\n      role=\"button\" data-slide=\"next\"\n    >\n        <span\n          class=\"glyphicon glyphicon-chevron-right\"\n          aria-hidden=\"true\"\n        ></span>\n        <span class=\"sr-only\">Next</span>\n    </a>\n</div>\n\n"
+module.exports = "<div class=\"jumbotron text-center\"\n  *ngIf =\"slides.length >0\"\n  id=\"carousel-example-generic\"\n  class=\"carousel slide margin-carousel\"\n  data-ride=\"carousel\"\n>\n    <!-- Indicators -->\n    <ol class=\"carousel-indicators\">\n        <li\n          *ngFor=\"let slide of slides; let i = index\"\n          data-target=\"#carousel-example-generic\"\n          [attr.data-slide-to]=\"i\"\n          [ngClass]=\"{'active': i == 0}\"\n        ></li>\n    </ol>\n\n  <!-- Wrapper for slides -->\n    <div class=\"carousel-inner\" role=\"listbox\">\n\t    <div\n\t      *ngFor=\"let data of slideData; let i = index\" \n\t      class=\"item item-container\"\n\t      [ngClass]=\"{'active': i == 0}\"\n\t    >\n\t        <!-- <img src=\"...\" alt=\"\"> -->\n\t        <div class=\"carousel-caption\">\n\t\t        <h3>{{ data.header }}</h3>\n\t\t        <p>{{ data.description }}</p>\n\t\t    </div>\n\t    </div>\n    </div>\n\n    <!-- Controls -->\n    <a\n      class=\"left carousel-control\"\n      href=\"#carousel-example-generic\"\n      role=\"button\"\n      data-slide=\"prev\"\n    >\n        <span\n          class=\"glyphicon glyphicon-chevron-left\"\n          aria-hidden=\"true\"\n        ></span>\n        <span class=\"sr-only\">Previous</span>\n    </a>\n    <a\n      class=\"right carousel-control\"\n      href=\"#carousel-example-generic\"\n      role=\"button\" data-slide=\"next\"\n    >\n        <span\n          class=\"glyphicon glyphicon-chevron-right\"\n          aria-hidden=\"true\"\n        ></span>\n        <span class=\"sr-only\">Next</span>\n    </a>\n</div>\n\n"
 
 /***/ }),
 
@@ -508,7 +508,6 @@ var ChatComponent = /** @class */ (function () {
         this.socket.getMessage()
             .subscribe(function (message) {
             //todo to show message in a modal
-            console.log(message);
         });
     };
     /**
@@ -626,7 +625,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".text-center {\r\n  font-family: cursive;\r\n  color: darkcyan;\r\n}", ""]);
 
 // exports
 
@@ -702,7 +701,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".header-margin {\r\n  margin-top: 7rem !important;\r\n}\r\n.margin-btn {\r\n  margin-top: 1rem !important;\t\r\n}\r\n.has-error {\r\n  border-color: red;\t\r\n}\r\n.flash-error {\r\n  margin-top: 2rem;\r\n}", ""]);
+exports.push([module.i, ".header-margin {\r\n  margin-top: 7rem !important;\r\n}\r\n.margin-btn {\r\n  margin-top: 1rem !important;\t\r\n}\r\n.has-error {\r\n  border-color: red;\t\r\n}\r\n.flash-error {\r\n  margin-top: 2rem;\r\n}\r\n.page-header {\r\n  font-family: cursive;\r\n  color: darkcyan;\t\r\n}\r\n.form-group {\r\n  font-family: cursive;\r\n  color: darkcyan;\r\n}", ""]);
 
 // exports
 
@@ -715,7 +714,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header header-margin\">Login</h2>\n<form novalidate [formGroup]=\"loginForm\" (submit)=\"onSubmit()\">\n  <div clas=\"form-group\">\n\t<label>UserName</label>\n\t<input\n\t  type=\"text\"\n\t  name=\"userName\"\n\t  formControlName=\"userName\"\n    class=\"form-control\"\n    [ngClass]=\"{'has-error': loginForm.get('userName').hasError('required') && formSubmitted}\"\n\t>\n  </div>\n  <div clas=\"form-group\">\n    <label>Password</label>\n\t<input\n\t  type=\"password\"\n\t  name=\"password\"\n\t  formControlName=\"password\"\n\t  class=\"form-control\"\n\t  [ngClass]=\"{'has-error': loginForm.get('password').hasError('required') && formSubmitted}\"\n\t>\n  </div>\n  <input\n    type=\"submit\"\n    class=\"btn btn-primary margin-btn\"\n    value=\"Submit\"\n    [disabled]=\"!loginForm.dirty\"\n  >\n</form>\n<div class=\"flash-error\">\n  <flash-messages></flash-messages>\n</div>\n"
+module.exports = "<h2 class=\"page-header header-margin\">Login</h2>\n<form novalidate [formGroup]=\"loginForm\" (submit)=\"onSubmit()\" class=\"form-group\">\n  <div clas=\"form-group\">\n\t<label>UserName</label>\n\t<input\n\t  type=\"text\"\n\t  name=\"userName\"\n\t  formControlName=\"userName\"\n    class=\"form-control\"\n    [ngClass]=\"{'has-error': loginForm.get('userName').hasError('required') && formSubmitted}\"\n\t>\n  </div>\n  <div clas=\"form-group\">\n    <label>Password</label>\n\t<input\n\t  type=\"password\"\n\t  name=\"password\"\n\t  formControlName=\"password\"\n\t  class=\"form-control\"\n\t  [ngClass]=\"{'has-error': loginForm.get('password').hasError('required') && formSubmitted}\"\n\t>\n  </div>\n  <input\n    type=\"submit\"\n    class=\"btn btn-primary margin-btn\"\n    value=\"Submit\"\n    [disabled]=\"!loginForm.dirty\"\n  >\n</form>\n<div class=\"flash-error\">\n  <flash-messages></flash-messages>\n</div>\n"
 
 /***/ }),
 
@@ -921,7 +920,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".header-margin {\r\n  margin-top: 7rem !important;\r\n}\r\n.margin-btn {\r\n  margin-top: 1rem !important;\t\r\n}\r\n.has-error {\r\n  border-color: red;\t\r\n}\r\n.flash-error {\r\n  margin-top: 2rem;\r\n}", ""]);
+exports.push([module.i, ".header-margin {\r\n  margin-top: 7rem !important;\r\n}\r\n.margin-btn {\r\n  margin-top: 1rem !important;\t\r\n}\r\n.has-error {\r\n  border-color: red;\t\r\n}\r\n.flash-error {\r\n  margin-top: 2rem;\r\n}\r\n.page-header {\r\n  font-family: cursive;\r\n  color: darkcyan;\r\n}\r\n.form-group {\r\n  font-family: cursive;\r\n  color: darkcyan;\r\n}", ""]);
 
 // exports
 
@@ -934,7 +933,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/register/register.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header header-margin\">Register</h2>\n<form novalidate  (submit)=\"onRegister()\" [formGroup]=\"registrationForm\">\n  <div clas=\"form-group\">\n\t  <label>Name</label>\n\t  <input\n      type=\"text\"\n      formControlName=\"name\"\n      name=\"name\"\n      class=\"form-control\"\n      [ngClass]=\"{'has-error': registrationForm.get('name').hasError('required') && formSubmitted}\"\n    >\n  </div>\n  <div clas=\"form-group\">\n    <label>UserName</label>\n\t  <input\n      type=\"text\"\n      formControlName=\"userName\"\n      name=\"userName\"\n      class=\"form-control\"\n      [ngClass]=\"{'has-error': registrationForm.get('userName').hasError('required') && formSubmitted}\"\n    >\n  </div>\n  <div clas=\"form-group\">\n\t  <label>Email</label>\n\t  <input\n      type=\"text\"\n      formControlName=\"email\"\n      name=\"email\"\n      class=\"form-control\"\n      [ngClass]=\"{'has-error': registrationForm.get('email').hasError('required') && formSubmitted}\"\n    >\n  </div>\n  <div clas=\"form-group\">\n\t  <label>Password</label>\n\t  <input\n      type=\"password\"\n      formControlName=\"password\" \n      name=\"password\"\n      class=\"form-control\"\n      [ngClass]=\"{'has-error': registrationForm.get('password').hasError('required') && formSubmitted}\"\n    >\n  </div>\n  <input\n    type=\"submit\"\n    class=\"btn btn-primary margin-btn\"\n    value=\"Submit\"\n    [disabled]=\"!registrationForm.dirty\"\n  >\n</form>\n<div class=\"flash-error\">\n  <flash-messages></flash-messages>\n</div>\n"
+module.exports = "<h2 class=\"page-header header-margin\">Register</h2>\n<form novalidate  (submit)=\"onRegister()\" [formGroup]=\"registrationForm\" class=\"form-group\">\n  <div clas=\"form-group\">\n\t  <label>Name</label>\n\t  <input\n      type=\"text\"\n      formControlName=\"name\"\n      name=\"name\"\n      class=\"form-control\"\n      [ngClass]=\"{'has-error': registrationForm.get('name').hasError('required') && formSubmitted}\"\n    >\n  </div>\n  <div clas=\"form-group\">\n    <label>UserName</label>\n\t  <input\n      type=\"text\"\n      formControlName=\"userName\"\n      name=\"userName\"\n      class=\"form-control\"\n      [ngClass]=\"{'has-error': registrationForm.get('userName').hasError('required') && formSubmitted}\"\n    >\n  </div>\n  <div clas=\"form-group\">\n\t  <label>Email</label>\n\t  <input\n      type=\"text\"\n      formControlName=\"email\"\n      name=\"email\"\n      class=\"form-control\"\n      [ngClass]=\"{'has-error': registrationForm.get('email').hasError('required') && formSubmitted}\"\n    >\n  </div>\n  <div clas=\"form-group\">\n\t  <label>Password</label>\n\t  <input\n      type=\"password\"\n      formControlName=\"password\" \n      name=\"password\"\n      class=\"form-control\"\n      [ngClass]=\"{'has-error': registrationForm.get('password').hasError('required') && formSubmitted}\"\n    >\n  </div>\n  <input\n    type=\"submit\"\n    class=\"btn btn-primary margin-btn\"\n    value=\"Submit\"\n    [disabled]=\"!registrationForm.dirty\"\n  >\n</form>\n<div class=\"flash-error\">\n  <flash-messages></flash-messages>\n</div>\n"
 
 /***/ }),
 
@@ -1212,9 +1211,10 @@ var TodoListComponent = /** @class */ (function () {
         this.data$.subscribe(function (user) {
             _this.user = user;
             if (!user.userId) {
-                //grab from backend
+                _this.user.userId = localStorage.getItem("userId");
+                _this.user.userName = localStorage.getItem("userName");
+                _this.user.email = localStorage.getItem("userEmail");
             }
-            console.log(user);
         });
     }
     TodoListComponent.prototype.ngOnInit = function () {
@@ -1553,13 +1553,30 @@ var initialState = {
     email: null,
     userId: null,
 };
+function setLocalStorage(data) {
+    if (typeof (Storage) !== "undefined") {
+        localStorage.setItem("userId", data.userId);
+        localStorage.setItem("userName", data.userName);
+        localStorage.setItem("userEmail", data.email);
+    }
+    else {
+        console.log('Sorry local storage not supported');
+    }
+}
+function removeLocalStorage() {
+    localStorage.removeItem("userId");
+    localStorage.removeItem("userName");
+    localStorage.removeItem("userEmail");
+}
 function userReducer(state, action) {
     if (state === void 0) { state = initialState; }
     switch (action.type) {
         case __WEBPACK_IMPORTED_MODULE_0__user_actions__["a" /* LOGIN */]:
             // Create a new state from payload
+            setLocalStorage(action.payload);
             return Object.assign({}, state, action.payload);
         case __WEBPACK_IMPORTED_MODULE_0__user_actions__["b" /* LOGOUT */]:
+            removeLocalStorage();
             return Object.assign({}, initialState);
         default:
             return state;
@@ -1874,7 +1891,6 @@ var TodoDataService = /** @class */ (function () {
      * @returns Json
     **/
     TodoDataService.prototype.addTodo = function (todo) {
-        console.log(todo);
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         this.loadToken();
         headers.append('Authorization', this.authToken);
@@ -1901,7 +1917,6 @@ var TodoDataService = /** @class */ (function () {
      * @param number id
     */
     TodoDataService.prototype.deleteTodo = function (id) {
-        console.log(id);
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         this.loadToken();
         headers.append('Authorization', this.authToken);

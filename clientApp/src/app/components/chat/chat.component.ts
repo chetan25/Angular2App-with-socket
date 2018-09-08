@@ -57,7 +57,6 @@ export class ChatComponent implements OnInit, OnDestroy {
     this.socket.getMessage()
       .subscribe(message => {
         //todo to show message in a modal
-        console.log(message);
       });  
   }
 

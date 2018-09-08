@@ -41,7 +41,6 @@ export class TodoDataService {
    * @returns Json
   **/ 
   addTodo(todo:Array<any>) {
-    console.log(todo);
 	  let headers = new Headers();
     this.loadToken();
     headers.append('Authorization', this.authToken);
@@ -80,7 +79,6 @@ export class TodoDataService {
    * @param number id
   */
   deleteTodo(id: number) {
-    console.log(id);
     let headers = new Headers();
     this.loadToken();
     headers.append('Authorization', this.authToken);
