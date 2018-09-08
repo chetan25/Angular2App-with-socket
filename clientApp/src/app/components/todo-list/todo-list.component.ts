@@ -8,6 +8,7 @@ declare var $:any;
 import { Store } from '@ngrx/store';
 import { UserState, User } from '../../redux-states/user/user-state';
 import { Observable } from 'rxjs/Observable';
+import { SocketConnectionService } from '../../services/socket-connection.service';
 
 @Component({
   selector: 'app-todo-list',
@@ -41,7 +42,8 @@ export class TodoListComponent implements OnInit {
     private todoDataService: TodoDataService,
     private flashMessagesService: FlashMessagesService,
     private myFilter: OrderByDatePipe,
-    private store: Store<UserState>
+    private store: Store<UserState>,
+    private socket: SocketConnectionService
   ) {
     //Get user profile from store
     //if store empty get from session.
@@ -52,6 +54,9 @@ export class TodoListComponent implements OnInit {
         this.user.userId = localStorage.getItem("userId");
         this.user.userName = localStorage.getItem("userName");
         this.user.email = localStorage.getItem("userEmail");
+        this.user.name = localStorage.getItem("name");
+        //add a socket connection
+        this.socket.joinChannel(this.user);
       }
     });
   }

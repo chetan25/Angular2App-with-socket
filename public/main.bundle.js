@@ -1179,6 +1179,7 @@ module.exports = "<div *ngIf=\"userId\">\n  <div class=\"flash-success\">\n    <
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_moment__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pipes_order_by_date_pipe__ = __webpack_require__("../../../../../src/app/pipes/order-by-date.pipe.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ngrx_store__ = __webpack_require__("../../../../@ngrx/store/@ngrx/store.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_socket_connection_service__ = __webpack_require__("../../../../../src/app/services/socket-connection.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1194,13 +1195,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var TodoListComponent = /** @class */ (function () {
-    function TodoListComponent(todoDataService, flashMessagesService, myFilter, store) {
+    function TodoListComponent(todoDataService, flashMessagesService, myFilter, store, socket) {
         var _this = this;
         this.todoDataService = todoDataService;
         this.flashMessagesService = flashMessagesService;
         this.myFilter = myFilter;
         this.store = store;
+        this.socket = socket;
         this.todos = [];
         this.sortOrder = true; //true means newest, false means oldest
         //this is for now defined in two places  
@@ -1214,6 +1217,9 @@ var TodoListComponent = /** @class */ (function () {
                 _this.user.userId = localStorage.getItem("userId");
                 _this.user.userName = localStorage.getItem("userName");
                 _this.user.email = localStorage.getItem("userEmail");
+                _this.user.name = localStorage.getItem("name");
+                //add a socket connection
+                _this.socket.joinChannel(_this.user);
             }
         });
     }
@@ -1381,7 +1387,8 @@ var TodoListComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_todo_data_service__["a" /* TodoDataService */],
             __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"],
             __WEBPACK_IMPORTED_MODULE_4__pipes_order_by_date_pipe__["a" /* OrderByDatePipe */],
-            __WEBPACK_IMPORTED_MODULE_5__ngrx_store__["a" /* Store */]])
+            __WEBPACK_IMPORTED_MODULE_5__ngrx_store__["a" /* Store */],
+            __WEBPACK_IMPORTED_MODULE_6__services_socket_connection_service__["a" /* SocketConnectionService */]])
     ], TodoListComponent);
     return TodoListComponent;
 }());
