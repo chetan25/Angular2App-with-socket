@@ -1604,7 +1604,7 @@ var RegisterService = /** @class */ (function () {
         this.http = http;
         this.store = store;
         this.socket = socket;
-        this.testMode = true;
+        this.testMode = false;
         this.url = this.testMode ? 'http://localhost:3020/' : 'https://peaceful-wave-48941.herokuapp.com/';
     }
     /**
@@ -1729,7 +1729,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var SocketConnectionService = /** @class */ (function () {
     function SocketConnectionService() {
-        this.testMode = true;
+        this.testMode = false;
         this.url = this.testMode ? 'http://localhost:3020/' : 'https://peaceful-wave-48941.herokuapp.com/';
     }
     /**
@@ -1850,7 +1850,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var TodoDataService = /** @class */ (function () {
     function TodoDataService(http) {
         this.http = http;
-        this.testMode = true;
+        this.testMode = false;
         this.url = this.testMode ? 'http://localhost:3020/' : 'https://peaceful-wave-48941.herokuapp.com/';
     }
     /**

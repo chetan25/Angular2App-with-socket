@@ -5,7 +5,7 @@ import * as io from 'socket.io-client';
 
 @Injectable()
 export class SocketConnectionService {
-  private testMode = true;
+  private testMode = false;
   private url;
   socket:SocketIOClient.Socket;
   constructor() { 
