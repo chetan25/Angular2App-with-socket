@@ -149,19 +149,20 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_user_validate_service__ = __webpack_require__("../../../../../src/app/services/user-validate.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ngrx_store__ = __webpack_require__("../../../../@ngrx/store/@ngrx/store.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__redux_states_user_user_reducer__ = __webpack_require__("../../../../../src/app/redux-states/user/user-reducer.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_navigationbar_navigationbar_component__ = __webpack_require__("../../../../../src/app/components/navigationbar/navigationbar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_home_home_component__ = __webpack_require__("../../../../../src/app/components/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_register_register_component__ = __webpack_require__("../../../../../src/app/components/register/register.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_login_login_component__ = __webpack_require__("../../../../../src/app/components/login/login.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/components/dashboard/dashboard.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_card_component_card_component_component__ = __webpack_require__("../../../../../src/app/components/card-component/card-component.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_todo_list_todo_list_component__ = __webpack_require__("../../../../../src/app/components/todo-list/todo-list.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_todo_list_item_todo_list_item_component__ = __webpack_require__("../../../../../src/app/components/todo-list-item/todo-list-item.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_carousel_component_carousel_component_component__ = __webpack_require__("../../../../../src/app/components/carousel-component/carousel-component.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_chat_chat_component__ = __webpack_require__("../../../../../src/app/components/chat/chat.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__components_todo_todo_component__ = __webpack_require__("../../../../../src/app/components/todo/todo.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__redux_states_todos_todo_reducer__ = __webpack_require__("../../../../../src/app/redux-states/todos/todo-reducer.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__redux_states_chat_users_chat_users_reducer__ = __webpack_require__("../../../../../src/app/redux-states/chat-users/chat-users-reducer.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_navigationbar_navigationbar_component__ = __webpack_require__("../../../../../src/app/components/navigationbar/navigationbar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_home_home_component__ = __webpack_require__("../../../../../src/app/components/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_register_register_component__ = __webpack_require__("../../../../../src/app/components/register/register.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_login_login_component__ = __webpack_require__("../../../../../src/app/components/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/components/dashboard/dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_card_component_card_component_component__ = __webpack_require__("../../../../../src/app/components/card-component/card-component.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_todo_list_todo_list_component__ = __webpack_require__("../../../../../src/app/components/todo-list/todo-list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_todo_list_item_todo_list_item_component__ = __webpack_require__("../../../../../src/app/components/todo-list-item/todo-list-item.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__components_carousel_component_carousel_component_component__ = __webpack_require__("../../../../../src/app/components/carousel-component/carousel-component.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__components_chat_chat_component__ = __webpack_require__("../../../../../src/app/components/chat/chat.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -181,8 +182,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-//components
 
+
+//components
 
 
 
@@ -201,29 +203,30 @@ var AppModule = /** @class */ (function () {
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_12__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__components_navigationbar_navigationbar_component__["a" /* NavigationbarComponent */],
-                __WEBPACK_IMPORTED_MODULE_14__components_home_home_component__["a" /* HomeComponent */],
-                __WEBPACK_IMPORTED_MODULE_15__components_register_register_component__["a" /* RegisterComponent */],
-                __WEBPACK_IMPORTED_MODULE_16__components_login_login_component__["a" /* LoginComponent */],
-                __WEBPACK_IMPORTED_MODULE_17__components_dashboard_dashboard_component__["a" /* DashboardComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__components_card_component_card_component_component__["a" /* CardComponentComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__components_todo_list_todo_list_component__["a" /* TodoListComponent */],
-                __WEBPACK_IMPORTED_MODULE_20__components_todo_list_item_todo_list_item_component__["a" /* TodoListItemComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__components_carousel_component_carousel_component_component__["a" /* CarouselComponentComponent */],
-                __WEBPACK_IMPORTED_MODULE_22__components_chat_chat_component__["a" /* ChatComponent */],
-                __WEBPACK_IMPORTED_MODULE_23__components_todo_todo_component__["a" /* TodoComponent */]
+                __WEBPACK_IMPORTED_MODULE_14__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__components_navigationbar_navigationbar_component__["a" /* NavigationbarComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__components_home_home_component__["a" /* HomeComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__components_register_register_component__["a" /* RegisterComponent */],
+                __WEBPACK_IMPORTED_MODULE_18__components_login_login_component__["a" /* LoginComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__components_dashboard_dashboard_component__["a" /* DashboardComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__components_card_component_card_component_component__["a" /* CardComponentComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__components_todo_list_todo_list_component__["a" /* TodoListComponent */],
+                __WEBPACK_IMPORTED_MODULE_22__components_todo_list_item_todo_list_item_component__["a" /* TodoListItemComponent */],
+                __WEBPACK_IMPORTED_MODULE_23__components_carousel_component_carousel_component_component__["a" /* CarouselComponentComponent */],
+                __WEBPACK_IMPORTED_MODULE_24__components_chat_chat_component__["a" /* ChatComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_3__angular_http__["HttpModule"],
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["d" /* ReactiveFormsModule */],
-                __WEBPACK_IMPORTED_MODULE_11__app_routing_module__["a" /* AppRoutingModule */],
+                __WEBPACK_IMPORTED_MODULE_13__app_routing_module__["a" /* AppRoutingModule */],
                 __WEBPACK_IMPORTED_MODULE_4_angular2_flash_messages__["FlashMessagesModule"].forRoot(),
                 __WEBPACK_IMPORTED_MODULE_9__ngrx_store__["b" /* StoreModule */].forRoot({
-                    user: __WEBPACK_IMPORTED_MODULE_10__redux_states_user_user_reducer__["a" /* userReducer */]
-                }),
+                    user: __WEBPACK_IMPORTED_MODULE_10__redux_states_user_user_reducer__["a" /* userReducer */],
+                    todos: __WEBPACK_IMPORTED_MODULE_11__redux_states_todos_todo_reducer__["a" /* todoReducer */],
+                    loggedUsers: __WEBPACK_IMPORTED_MODULE_12__redux_states_chat_users_chat_users_reducer__["a" /* loggedUserReducer */]
+                })
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_8__services_user_validate_service__["a" /* UserValidateService */],
@@ -231,7 +234,7 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_7__auth_gaurd_auth_gaurd_service__["a" /* AuthGaurdService */],
                 __WEBPACK_IMPORTED_MODULE_5__services_socket_connection_service__["a" /* SocketConnectionService */]
             ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_12__app_component__["a" /* AppComponent */]]
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_14__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
@@ -298,7 +301,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".text-header {\r\n  font-family: cursive;\r\n  color: darkcyan;\r\n  font-size: x-large;\r\n}\r\n.text-footer {\r\n  font-family: cursive;\r\n  color: darkcyan;\r\n  font-size: large;\t\r\n}", ""]);
 
 // exports
 
@@ -311,7 +314,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/card-component/card-component.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div\n  class=\"card card-outline-primary mb-3 text-center\"\n  *ngFor=\"let detail of details\"\n>\n    <div class=\"card-block\">\n        <blockquote class=\"card-blockquote\">\n            <p>{{ detail.description }}</p>\n            <footer>{{ detail.name }}</footer>\n        </blockquote>\n    </div>\n</div>"
+module.exports = "<div\n  class=\"card card-outline-primary mb-3 text-center\"\n  *ngFor=\"let detail of details\"\n>\n    <div class=\"card-block\">\n        <blockquote class=\"card-blockquote\">\n            <p class=\"text-header\">{{ detail.description }}</p>\n            <footer class=\"text-footer\">{{ detail.name }}</footer>\n        </blockquote>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -376,7 +379,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/carousel-component/carousel-component.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div\n  *ngIf =\"slides.length >0\"\n  id=\"carousel-example-generic\"\n  class=\"carousel slide margin-carousel\"\n  data-ride=\"carousel\"\n>\n    <!-- Indicators -->\n    <ol class=\"carousel-indicators\">\n        <li\n          *ngFor=\"let slide of slides; let i = index\"\n          data-target=\"#carousel-example-generic\"\n          [attr.data-slide-to]=\"i\"\n          [ngClass]=\"{'active': i == 0}\"\n        ></li>\n    </ol>\n\n  <!-- Wrapper for slides -->\n    <div class=\"carousel-inner\" role=\"listbox\">\n\t    <div\n\t      *ngFor=\"let data of slideData; let i = index\" \n\t      class=\"item item-container\"\n\t      [ngClass]=\"{'active': i == 0}\"\n\t    >\n\t        <!-- <img src=\"...\" alt=\"\"> -->\n\t        <div class=\"carousel-caption\">\n\t\t        <h3>{{ data.header }}</h3>\n\t\t        <p>{{ data.description }}</p>\n\t\t    </div>\n\t    </div>\n    </div>\n\n    <!-- Controls -->\n    <a\n      class=\"left carousel-control\"\n      href=\"#carousel-example-generic\"\n      role=\"button\"\n      data-slide=\"prev\"\n    >\n        <span\n          class=\"glyphicon glyphicon-chevron-left\"\n          aria-hidden=\"true\"\n        ></span>\n        <span class=\"sr-only\">Previous</span>\n    </a>\n    <a\n      class=\"right carousel-control\"\n      href=\"#carousel-example-generic\"\n      role=\"button\" data-slide=\"next\"\n    >\n        <span\n          class=\"glyphicon glyphicon-chevron-right\"\n          aria-hidden=\"true\"\n        ></span>\n        <span class=\"sr-only\">Next</span>\n    </a>\n</div>\n\n"
+module.exports = "<div class=\"jumbotron text-center\"\n  *ngIf =\"slides.length >0\"\n  id=\"carousel-example-generic\"\n  class=\"carousel slide margin-carousel\"\n  data-ride=\"carousel\"\n>\n    <!-- Indicators -->\n    <ol class=\"carousel-indicators\">\n        <li\n          *ngFor=\"let slide of slides; let i = index\"\n          data-target=\"#carousel-example-generic\"\n          [attr.data-slide-to]=\"i\"\n          [ngClass]=\"{'active': i == 0}\"\n        ></li>\n    </ol>\n\n  <!-- Wrapper for slides -->\n    <div class=\"carousel-inner\" role=\"listbox\">\n\t    <div\n\t      *ngFor=\"let data of slideData; let i = index\" \n\t      class=\"item item-container\"\n\t      [ngClass]=\"{'active': i == 0}\"\n\t    >\n\t        <!-- <img src=\"...\" alt=\"\"> -->\n\t        <div class=\"carousel-caption\">\n\t\t        <h3>{{ data.header }}</h3>\n\t\t        <p>{{ data.description }}</p>\n\t\t    </div>\n\t    </div>\n    </div>\n\n    <!-- Controls -->\n    <a\n      class=\"left carousel-control\"\n      href=\"#carousel-example-generic\"\n      role=\"button\"\n      data-slide=\"prev\"\n    >\n        <span\n          class=\"glyphicon glyphicon-chevron-left\"\n          aria-hidden=\"true\"\n        ></span>\n        <span class=\"sr-only\">Previous</span>\n    </a>\n    <a\n      class=\"right carousel-control\"\n      href=\"#carousel-example-generic\"\n      role=\"button\" data-slide=\"next\"\n    >\n        <span\n          class=\"glyphicon glyphicon-chevron-right\"\n          aria-hidden=\"true\"\n        ></span>\n        <span class=\"sr-only\">Next</span>\n    </a>\n</div>\n\n"
 
 /***/ }),
 
@@ -433,7 +436,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".permission-granted-item {\r\n background: aliceblue;\t\r\n}\r\n\r\n.panel-text{\r\n font-size: large;\r\n font-weight: 600;\r\n font-family: sans-serif;\r\n}\r\n\r\n.permission-granted-text {\r\n float: right;\r\n color: green;\r\n padding-top: 1.5rem;\r\n}", ""]);
 
 // exports
 
@@ -446,7 +449,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/chat/chat.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"users\">\n  <div class=\"panel panel-default\">\n    <div class=\"panel-heading\">\n      Logged In Users\n    </div>\n    <div class=\"panel-body\">\n      <div class=\"list-group\">\n        <button\n          type=\"button\"\n          class=\"list-group-item\"\n          *ngFor=\"let user of users\"\n          (click)=\"openChat(user)\"\n        >{{ user.userName }}</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div class=\"flash-success\">\n  <flash-messages></flash-messages>\n</div>"
+module.exports = "<div *ngIf=\"users\">\n  <div class=\"panel panel-primary\">\n    <div class=\"panel-heading panel-text\">\n      Logged In Users\n    </div>\n    <div class=\"panel-body\">\n      <div class=\"list-group\">\n        <a\n          href=\"#\"\n          class=\"list-group-item\"\n          *ngFor=\"let user of users\"\n          (click)=\"togglePermissions(user)\"\n        >\n          <span class=\"panel-text\">{{ user.userName }}</span>\n          <span class=\"permission-granted-text\">Permission Granted</span>\n        </a>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div class=\"flash-success\">\n  <flash-messages></flash-messages>\n</div>"
 
 /***/ }),
 
@@ -459,6 +462,7 @@ module.exports = "<div *ngIf=\"users\">\n  <div class=\"panel panel-default\">\n
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_socket_connection_service__ = __webpack_require__("../../../../../src/app/services/socket-connection.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/module/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngrx_store__ = __webpack_require__("../../../../@ngrx/store/@ngrx/store.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -471,10 +475,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var ChatComponent = /** @class */ (function () {
-    function ChatComponent(flashMessagesService, socket) {
+    function ChatComponent(flashMessagesService, socket, store) {
         this.flashMessagesService = flashMessagesService;
         this.socket = socket;
+        this.store = store;
     }
     ChatComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -482,7 +488,7 @@ var ChatComponent = /** @class */ (function () {
         //get the logged in user
         this.socket.getJoinedUsers(this.user)
             .subscribe(function (socketData) {
-            _this.users = socketData['data'];
+            _this.users = socketData['data'].filter(function (data) { return _this.user['name'] !== data['userName']; });
             if (socketData['newUserNameJoined'] &&
                 _this.user['name'] !== socketData['newUserNameJoined']) {
                 _this.flashMessagesService.show('User ' + socketData['newUserNameJoined'] + ' joined.', {
@@ -502,7 +508,6 @@ var ChatComponent = /** @class */ (function () {
         this.socket.getMessage()
             .subscribe(function (message) {
             //todo to show message in a modal
-            console.log(message);
         });
     };
     /**
@@ -513,6 +518,14 @@ var ChatComponent = /** @class */ (function () {
     ChatComponent.prototype.openChat = function (user) {
         //todo: to open a pop up for chat
         this.socket.sendMessage(user['userId'], 'test');
+        $("#myButton").button('reset');
+    };
+    /**
+    * Toggle permission for the user
+    *
+    * @param object user
+    */
+    ChatComponent.prototype.togglePermissions = function (user) {
     };
     ChatComponent.prototype.ngOnDestroy = function () {
         //this.connection.unsubscribe();
@@ -524,7 +537,8 @@ var ChatComponent = /** @class */ (function () {
             styles: [__webpack_require__("../../../../../src/app/components/chat/chat.component.css")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"],
-            __WEBPACK_IMPORTED_MODULE_1__services_socket_connection_service__["a" /* SocketConnectionService */]])
+            __WEBPACK_IMPORTED_MODULE_1__services_socket_connection_service__["a" /* SocketConnectionService */],
+            __WEBPACK_IMPORTED_MODULE_3__ngrx_store__["a" /* Store */]])
     ], ChatComponent);
     return ChatComponent;
 }());
@@ -611,7 +625,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".text-center {\r\n  font-family: cursive;\r\n  color: darkcyan;\r\n}", ""]);
 
 // exports
 
@@ -624,7 +638,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\n    <h1 class=\"display-3\">Welcome to the site</h1>\n    <p class=\"lead\"> To start please register or login in the App.</p>\n    <hr class=\"my-4\">\n    <div>\n        <a\n          class=\"btn btn-primary\"\n          [routerLink]=\"['/register']\"\n          *ngIf=\"!registerService.loggedIn()\"\n        >Register</a>\n    </div>\n</div>\n\n<app-card-component [details] = \"strackTraceDetails\"></app-card-component>"
+module.exports = "<div class=\"jumbotron text-center\">\n    <h1 class=\"display-3\">Welcome to the site</h1>\n    <p class=\"lead\"> To start please register or login in the App.</p>\n    <hr class=\"my-4\">\n    <div> \n        <a\n          class=\"btn btn-primary\"\n          [routerLink]=\"['/register']\"\n          *ngIf=\"!registerService.loggedIn()\"\n        >Register</a>\n    </div>\n</div>\n\n<app-card-component [details] = \"strackTraceDetails\"></app-card-component>"
 
 /***/ }),
 
@@ -687,7 +701,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".header-margin {\r\n  margin-top: 7rem !important;\r\n}\r\n.margin-btn {\r\n  margin-top: 1rem !important;\t\r\n}\r\n.has-error {\r\n  border-color: red;\t\r\n}\r\n.flash-error {\r\n  margin-top: 2rem;\r\n}", ""]);
+exports.push([module.i, ".header-margin {\r\n  margin-top: 7rem !important;\r\n}\r\n.margin-btn {\r\n  margin-top: 1rem !important;\t\r\n}\r\n.has-error {\r\n  border-color: red;\t\r\n}\r\n.flash-error {\r\n  margin-top: 2rem;\r\n}\r\n.page-header {\r\n  font-family: cursive;\r\n  color: darkcyan;\t\r\n}\r\n.form-group {\r\n  font-family: cursive;\r\n  color: darkcyan;\r\n}", ""]);
 
 // exports
 
@@ -700,7 +714,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header header-margin\">Login</h2>\n<form novalidate [formGroup]=\"loginForm\" (submit)=\"onSubmit()\">\n  <div clas=\"form-group\">\n\t<label>UserName</label>\n\t<input\n\t  type=\"text\"\n\t  name=\"userName\"\n\t  formControlName=\"userName\"\n    class=\"form-control\"\n    [ngClass]=\"{'has-error': loginForm.get('userName').hasError('required') && formSubmitted}\"\n\t>\n  </div>\n  <div clas=\"form-group\">\n    <label>Password</label>\n\t<input\n\t  type=\"password\"\n\t  name=\"password\"\n\t  formControlName=\"password\"\n\t  class=\"form-control\"\n\t  [ngClass]=\"{'has-error': loginForm.get('password').hasError('required') && formSubmitted}\"\n\t>\n  </div>\n  <input\n    type=\"submit\"\n    class=\"btn btn-primary margin-btn\"\n    value=\"Submit\"\n    [disabled]=\"!loginForm.dirty\"\n  >\n</form>\n<div class=\"flash-error\">\n  <flash-messages></flash-messages>\n</div>\n"
+module.exports = "<h2 class=\"page-header header-margin\">Login</h2>\n<form novalidate [formGroup]=\"loginForm\" (submit)=\"onSubmit()\" class=\"form-group\">\n  <div clas=\"form-group\">\n\t<label>UserName</label>\n\t<input\n\t  type=\"text\"\n\t  name=\"userName\"\n\t  formControlName=\"userName\"\n    class=\"form-control\"\n    [ngClass]=\"{'has-error': loginForm.get('userName').hasError('required') && formSubmitted}\"\n\t>\n  </div>\n  <div clas=\"form-group\">\n    <label>Password</label>\n\t<input\n\t  type=\"password\"\n\t  name=\"password\"\n\t  formControlName=\"password\"\n\t  class=\"form-control\"\n\t  [ngClass]=\"{'has-error': loginForm.get('password').hasError('required') && formSubmitted}\"\n\t>\n  </div>\n  <input\n    type=\"submit\"\n    class=\"btn btn-primary margin-btn\"\n    value=\"Submit\"\n    [disabled]=\"!loginForm.dirty\"\n  >\n</form>\n<div class=\"flash-error\">\n  <flash-messages></flash-messages>\n</div>\n"
 
 /***/ }),
 
@@ -747,7 +761,9 @@ var LoginComponent = /** @class */ (function () {
     LoginComponent.prototype.ngOnInit = function () {
     };
     LoginComponent.prototype.ngOnDestroy = function () {
-        this.observable.unsubscribe();
+        if (this.observable) {
+            this.observable.unsubscribe();
+        }
     };
     /**
     * on form submit
@@ -827,7 +843,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/navigationbar/navigationbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-default navbar-fixed-top\">\n    <div class=\"container-fluid\">\n        <div class=\"navbar-header\">\n            <button\n              type=\"button\"\n              class=\"navbar-toggle collapsed\"\n              data-toggle=\" collapse\"\n              data-target=\"#navbar-main\"\n              (click)=\"toggleState()\"\n            >\n                <span class=\"sr-only\">Toggle navigation</span>\n                <span class=\"icon-bar\"></span>\n                <span class=\"icon-bar\"></span>\n                <span class=\"icon-bar\"></span>\n            </button>\n            <a class=\"navbar-brand\">Todo App</a>\n        </div>\n        <div\n          class=\"collapse navbar-collapse\"\n          id=\"navbar-main\"\n          [ngClass]=\"{ 'in': isIn  }\"\n        >\n            <ul class=\"nav navbar-nav navbar-left\">\n                <li\n                  [routerLinkActive]=\"['active']\"\n                  [routerLinkActiveOptions]=\"{exact: true}\"\n                ><a [routerLink] =\"['/']\">Home</a>\n                </li>\n            </ul>\n            <ul class=\"nav navbar-nav navbar-right\">\n                <li\n                  *ngIf=\"registerService.loggedIn()\"\n                  [routerLinkActive]=\"['active']\"\n                  [routerLinkActiveOptions]=\"{exact: true}\"\n                ><a [routerLink] =\"['/profile']\">Profile</a>\n                </li>\n      \n                <li\n                  *ngIf=\"!registerService.loggedIn()\"\n                  [routerLinkActive]=\"['active']\"\n                  [routerLinkActiveOptions]=\"{exact: true}\"\n                ><a [routerLink] =\"['/register']\">Register</a>\n                </li>\n                <li\n                  *ngIf=\"!registerService.loggedIn()\"\n                  [routerLinkActive]=\"['active']\"\n                  [routerLinkActiveOptions]=\"{exact: true}\"\n                ><a [routerLink] =\"['/login']\">Login</a>\n                </li>\n                <li\n                  *ngIf=\"registerService.loggedIn()\"\n                ><a (click)=\"onLogout()\">Logout</a>\n                </li>\n            </ul>\n        </div><!--/.nav-collapse -->\n    </div>\n</nav>\n\n"
+module.exports = "<nav class=\"navbar navbar-default navbar-fixed-top\">\n    <div class=\"container-fluid\">\n        <div class=\"navbar-header\">\n            <button\n              type=\"button\"\n              class=\"navbar-toggle collapsed\"\n              data-toggle=\" collapse\"\n              data-target=\"#navbar-main\"\n              (click)=\"toggleState()\"\n            >\n                <span class=\"sr-only\">Toggle navigation</span>\n                <span class=\"icon-bar\"></span>\n                <span class=\"icon-bar\"></span>\n                <span class=\"icon-bar\"></span>\n            </button>\n            <a class=\"navbar-brand\">Todo App</a>\n        </div>\n        <div\n          class=\"collapse navbar-collapse\"\n          id=\"navbar-main\"\n          [ngClass]=\"{ 'in': isIn  }\"\n        >\n            <ul class=\"nav navbar-nav navbar-left\">\n                <li \n                  [routerLinkActive]=\"['active']\"\n                  [routerLinkActiveOptions]=\"{exact: true}\"\n                ><a [routerLink] =\"['/']\">Home</a>\n                </li>\n            </ul>\n            <ul class=\"nav navbar-nav navbar-right\">\n                <li\n                  *ngIf=\"registerService.loggedIn()\"\n                  [routerLinkActive]=\"['active']\"\n                  [routerLinkActiveOptions]=\"{exact: true}\"\n                ><a [routerLink] =\"['/profile']\">Profile</a>\n                </li>\n      \n                <li\n                  *ngIf=\"!registerService.loggedIn()\"\n                  [routerLinkActive]=\"['active']\"\n                  [routerLinkActiveOptions]=\"{exact: true}\"\n                ><a [routerLink] =\"['/register']\">Register</a>\n                </li>\n                <li\n                  *ngIf=\"!registerService.loggedIn()\"\n                  [routerLinkActive]=\"['active']\"\n                  [routerLinkActiveOptions]=\"{exact: true}\"\n                ><a [routerLink] =\"['/login']\">Login</a>\n                </li>\n                <li\n                  *ngIf=\"registerService.loggedIn()\"\n                ><a (click)=\"onLogout()\">Logout</a>\n                </li>\n            </ul>\n        </div><!--/.nav-collapse -->\n    </div>\n</nav>\n\n"
 
 /***/ }),
 
@@ -904,7 +920,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".header-margin {\r\n  margin-top: 7rem !important;\r\n}\r\n.margin-btn {\r\n  margin-top: 1rem !important;\t\r\n}\r\n.has-error {\r\n  border-color: red;\t\r\n}\r\n.flash-error {\r\n  margin-top: 2rem;\r\n}", ""]);
+exports.push([module.i, ".header-margin {\r\n  margin-top: 7rem !important;\r\n}\r\n.margin-btn {\r\n  margin-top: 1rem !important;\t\r\n}\r\n.has-error {\r\n  border-color: red;\t\r\n}\r\n.flash-error {\r\n  margin-top: 2rem;\r\n}\r\n.page-header {\r\n  font-family: cursive;\r\n  color: darkcyan;\r\n}\r\n.form-group {\r\n  font-family: cursive;\r\n  color: darkcyan;\r\n}", ""]);
 
 // exports
 
@@ -917,7 +933,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/register/register.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header header-margin\">Register</h2>\n<form novalidate  (submit)=\"onRegister()\" [formGroup]=\"registrationForm\">\n  <div clas=\"form-group\">\n\t  <label>Name</label>\n\t  <input\n      type=\"text\"\n      formControlName=\"name\"\n      name=\"name\"\n      class=\"form-control\"\n      [ngClass]=\"{'has-error': registrationForm.get('name').hasError('required') && formSubmitted}\"\n    >\n  </div>\n  <div clas=\"form-group\">\n    <label>UserName</label>\n\t  <input\n      type=\"text\"\n      formControlName=\"userName\"\n      name=\"userName\"\n      class=\"form-control\"\n      [ngClass]=\"{'has-error': registrationForm.get('userName').hasError('required') && formSubmitted}\"\n    >\n  </div>\n  <div clas=\"form-group\">\n\t  <label>Email</label>\n\t  <input\n      type=\"text\"\n      formControlName=\"email\"\n      name=\"email\"\n      class=\"form-control\"\n      [ngClass]=\"{'has-error': registrationForm.get('email').hasError('required') && formSubmitted}\"\n    >\n  </div>\n  <div clas=\"form-group\">\n\t  <label>Password</label>\n\t  <input\n      type=\"password\"\n      formControlName=\"password\" \n      name=\"password\"\n      class=\"form-control\"\n      [ngClass]=\"{'has-error': registrationForm.get('password').hasError('required') && formSubmitted}\"\n    >\n  </div>\n  <input\n    type=\"submit\"\n    class=\"btn btn-primary margin-btn\"\n    value=\"Submit\"\n    [disabled]=\"!registrationForm.dirty\"\n  >\n</form>\n<div class=\"flash-error\">\n  <flash-messages></flash-messages>\n</div>\n"
+module.exports = "<h2 class=\"page-header header-margin\">Register</h2>\n<form novalidate  (submit)=\"onRegister()\" [formGroup]=\"registrationForm\" class=\"form-group\">\n  <div clas=\"form-group\">\n\t  <label>Name</label>\n\t  <input\n      type=\"text\"\n      formControlName=\"name\"\n      name=\"name\"\n      class=\"form-control\"\n      [ngClass]=\"{'has-error': registrationForm.get('name').hasError('required') && formSubmitted}\"\n    >\n  </div>\n  <div clas=\"form-group\">\n    <label>UserName</label>\n\t  <input\n      type=\"text\"\n      formControlName=\"userName\"\n      name=\"userName\"\n      class=\"form-control\"\n      [ngClass]=\"{'has-error': registrationForm.get('userName').hasError('required') && formSubmitted}\"\n    >\n  </div>\n  <div clas=\"form-group\">\n\t  <label>Email</label>\n\t  <input\n      type=\"text\"\n      formControlName=\"email\"\n      name=\"email\"\n      class=\"form-control\"\n      [ngClass]=\"{'has-error': registrationForm.get('email').hasError('required') && formSubmitted}\"\n    >\n  </div>\n  <div clas=\"form-group\">\n\t  <label>Password</label>\n\t  <input\n      type=\"password\"\n      formControlName=\"password\" \n      name=\"password\"\n      class=\"form-control\"\n      [ngClass]=\"{'has-error': registrationForm.get('password').hasError('required') && formSubmitted}\"\n    >\n  </div>\n  <input\n    type=\"submit\"\n    class=\"btn btn-primary margin-btn\"\n    value=\"Submit\"\n    [disabled]=\"!registrationForm.dirty\"\n  >\n</form>\n<div class=\"flash-error\">\n  <flash-messages></flash-messages>\n</div>\n"
 
 /***/ }),
 
@@ -1146,7 +1162,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/todo-list/todo-list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"userId\">\n  <div class=\"flash-success\">\n    <flash-messages></flash-messages>\n  </div>\n  <!-- if length of todo is 0 -->\n  <div *ngIf=\"todos.length === 0\">\n    <div class=\"row\">\n      <div class=\"col-sm-12 col-md-12\">\n        <div class=\"thumbnail\">\n          <div class=\"caption\">\n            <h3>Welcome, {{ user['name'] }}</h3>\n            <p>Seems like you are new to this site,\n               start exploring by adding your first Todo.\n            </p>\n            <p>\n              <button\n                class=\"btn btn-primary\"\n                type=\"button\"\n                (click)=\"openAddTodoModal()\"\n              >Add Todo</button>\n            </p>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <!-- if length of todo is greater than 0 -->\n  <div\n    *ngIf=\"todos.length > 0\" class=\"todo-list-container\"\n  >\n    <div>\n      <button\n        class=\"btn btn-primary\"\n        type=\"button\"\n        (click)=\"openAddTodoModal()\"\n      >Add Todo</button>\n      <button\n        class=\"btn btn-primary\"\n        type=\"button\"\n        (click)=\"sortTodoByDate()\"\n      >{{ sortOrder ? 'Oldest' : 'Newest' }}</button>\n    </div>\n    <div\n      *ngFor=\"let row of rows; let i = index\"\n      class=\"todo-wrapper\"\n    >\n      <div class=\"row\">\n        <app-todo-list-item\n          *ngFor=\"let item of [0,1,2,3]\"\n          [todoIndex]=\"4*i + item\"\n          [todolist]=\"todos[4*i + item]\"\n          (onTodoEdit)=\"todoEdit($event)\"\n          (onTodoDelete)=\"todoDelete($event)\"\n          (onShowDetails)=\"todoShowDetails($event)\"\n        ></app-todo-list-item>\n  \t  </div>\n    </div>\n  </div>  \n</div>\n<!-- Modal -->\n<div\n  class=\"modal fade\"\n  id=\"myModal\" #myModal\n  tabindex=\"-1\"\n  role=\"dialog\"\n  aria-labelledby=\"myModalLabel\"\n>\n  <div class=\"modal-dialog\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button\n          type=\"button\"\n          class=\"close\"\n          data-dismiss=\"modal\"\n          aria-label=\"Close\"\n        ><span aria-hidden=\"true\">&times;</span></button>\n        <h4 class=\"modal-title\" id=\"myModalLabel\">{{ modalTitle }}</h4>\n      </div>\n      <div class=\"modal-body\">\n        <div class=\"input-group input-group-sm\">\n          <span class=\"input-group-addon\" id=\"sizing-addon1\">Title</span>\n          <input\n            type=\"text\"\n            class=\"form-control\"\n            placeholder=\"Title\"\n            aria-describedby=\"sizing-addon1\"\n            [(ngModel)]=\"todoTitle\"\n          >\n        </div>\n        <div class=\"input-group input-group-sm top-margin\">\n          <span class=\"input-group-addon\" id=\"sizing-addon1\">Description</span>\n          <textarea\n            class=\"form-control description-textarea\"\n            placeholder=\"Description\"\n            aria-describedby=\"sizing-addon1\"\n            [(ngModel)]=\"todoDescription\"\n          ></textarea>\n        </div>\n        <div class=\"input-group input-group-sm top-margin\">\n          <span class=\"input-group-addon\" id=\"sizing-addon1\">Completed</span>\n          <input\n            type=\"checkbox\"\n            class=\"form-control completed-checkbox\"\n            placeholder=\"Completed\"\n            aria-describedby=\"sizing-addon1\"\n            [(ngModel)]=\"todoCompleted\"\n          >\n        </div>\n      </div>\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n        <button\n          type=\"button\"\n          class=\"btn btn-primary\"\n          *ngIf=\"modalAction == 'edit'\"\n          (click)=\"saveEditTodo()\"\n        >Save changes</button>\n        <button\n          type=\"button\"\n          class=\"btn btn-primary\"\n          *ngIf=\"modalAction == 'add'\"\n          (click)=\"addTodo()\"\n        >Save changes</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n\n<!-- modal --> \n<div\n  class=\"modal fade\"\n  id=\"showDetailModal\" #showDetailModal\n  tabindex=\"-1\"\n  role=\"dialog\"\n  aria-labelledby=\"showDetailModalLabel\"\n>\n  <div class=\"modal-dialog\" role=\"document\">\n    <div class=\"modal-content\" *ngIf=\"todos && todos[selectedIndex]\">\n      <div class=\"modal-header\">\n        <button\n          type=\"button\"\n          class=\"close\"\n          data-dismiss=\"modal\"\n          aria-label=\"Close\"\n        ><span aria-hidden=\"true\">&times;</span></button>\n        <h4 class=\"modal-title\" id=\"showDetailModalLabel\">ToDo Details</h4>\n      </div>\n      <div class=\"modal-body\">\n        <div class=\"page-header\">\n          <h3>Title: <small>{{ todos[selectedIndex].title }}</small></h3>\n        </div>\n        <div class=\"page-header\">\n          <h3>Description: <small>{{ todos[selectedIndex].description }}</small></h3>\n        </div>\n        <div class=\"page-header\">\n          <h3>Creation Date: <small>{{ todos[selectedIndex].createdOn }}</small></h3>\n        </div>\n        <div class=\"page-header\">\n          <h3>Completed: <small>{{ todos[selectedIndex].completed }}</small></h3>\n        </div>\n      </div>\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<div *ngIf=\"userId\">\n  <div class=\"flash-success\">\n    <flash-messages></flash-messages>\n  </div>\n  <!-- if length of todo is 0 -->\n  <div *ngIf=\"todos.length === 0\">\n    <div class=\"row\">\n      <div class=\"col-sm-12 col-md-12\">\n        <div class=\"thumbnail\">\n          <div class=\"caption\">\n            <h3>Welcome, {{ user['name'] }}</h3>\n            <p>Seems like you are new to this site,\n               start exploring by adding your first Todo.\n            </p>\n            <p>\n              <button\n                class=\"btn btn-primary\"\n                type=\"button\"\n                (click)=\"openAddTodoModal()\"\n              >Add Todo</button>\n            </p>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <!-- if length of todo is greater than 0 -->\n  <div\n    *ngIf=\"todos.length > 0\" class=\"todo-list-container\"\n  >\n    <div>\n      <button\n        class=\"btn btn-primary\"\n        type=\"button\"\n        (click)=\"openAddTodoModal()\"\n      >Add Todo</button>\n      <button\n        class=\"btn btn-primary\"\n        type=\"button\"\n        (click)=\"sortTodoByDate()\"\n      >{{ sortOrder ? 'Oldest' : 'Newest' }}</button>\n    </div>\n    <div\n      *ngFor=\"let row of rows; let i = index\"\n      class=\"todo-wrapper\"\n    > \n      <div class=\"row\">\n        <app-todo-list-item\n          *ngFor=\"let item of [0,1,2,3]\"\n          [todoIndex]=\"4*i + item\"\n          [todolist]=\"todos[4*i + item]\"\n          (onTodoEdit)=\"todoEdit($event)\"\n          (onTodoDelete)=\"todoDelete($event)\"\n          (onShowDetails)=\"todoShowDetails($event)\"\n        ></app-todo-list-item>\n  \t  </div>\n    </div>\n  </div>  \n</div>\n<!-- Modal -->\n<div\n  class=\"modal fade\"\n  id=\"myModal\" #myModal\n  tabindex=\"-1\"\n  role=\"dialog\"\n  aria-labelledby=\"myModalLabel\"\n>\n  <div class=\"modal-dialog\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button\n          type=\"button\"\n          class=\"close\"\n          data-dismiss=\"modal\"\n          aria-label=\"Close\"\n        ><span aria-hidden=\"true\">&times;</span></button>\n        <h4 class=\"modal-title\" id=\"myModalLabel\">{{ modalTitle }}</h4>\n      </div>\n      <div class=\"modal-body\">\n        <div class=\"input-group input-group-sm\">\n          <span class=\"input-group-addon\" id=\"sizing-addon1\">Title</span>\n          <input\n            type=\"text\"\n            class=\"form-control\"\n            placeholder=\"Title\"\n            aria-describedby=\"sizing-addon1\"\n            [(ngModel)]=\"todoTitle\"\n          >\n        </div>\n        <div class=\"input-group input-group-sm top-margin\">\n          <span class=\"input-group-addon\" id=\"sizing-addon1\">Description</span>\n          <textarea\n            class=\"form-control description-textarea\"\n            placeholder=\"Description\"\n            aria-describedby=\"sizing-addon1\"\n            [(ngModel)]=\"todoDescription\"\n          ></textarea>\n        </div>\n        <div class=\"input-group input-group-sm top-margin\">\n          <span class=\"input-group-addon\" id=\"sizing-addon1\">Completed</span>\n          <input\n            type=\"checkbox\"\n            class=\"form-control completed-checkbox\"\n            placeholder=\"Completed\"\n            aria-describedby=\"sizing-addon1\"\n            [(ngModel)]=\"todoCompleted\"\n          >\n        </div>\n      </div>\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n        <button\n          type=\"button\"\n          class=\"btn btn-primary\"\n          *ngIf=\"modalAction == 'edit'\"\n          (click)=\"saveEditTodo()\"\n        >Save changes</button>\n        <button\n          type=\"button\"\n          class=\"btn btn-primary\"\n          *ngIf=\"modalAction == 'add'\"\n          (click)=\"addTodo()\"\n        >Save changes</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n\n<!-- modal --> \n<div\n  class=\"modal fade\"\n  id=\"showDetailModal\" #showDetailModal\n  tabindex=\"-1\"\n  role=\"dialog\"\n  aria-labelledby=\"showDetailModalLabel\"\n>\n  <div class=\"modal-dialog\" role=\"document\">\n    <div class=\"modal-content\" *ngIf=\"todos && todos[selectedIndex]\">\n      <div class=\"modal-header\">\n        <button\n          type=\"button\"\n          class=\"close\"\n          data-dismiss=\"modal\"\n          aria-label=\"Close\"\n        ><span aria-hidden=\"true\">&times;</span></button>\n        <h4 class=\"modal-title\" id=\"showDetailModalLabel\">ToDo Details</h4>\n      </div>\n      <div class=\"modal-body\">\n        <div class=\"page-header\">\n          <h3>Title: <small>{{ todos[selectedIndex].title }}</small></h3>\n        </div>\n        <div class=\"page-header\">\n          <h3>Description: <small>{{ todos[selectedIndex].description }}</small></h3>\n        </div>\n        <div class=\"page-header\">\n          <h3>Creation Date: <small>{{ todos[selectedIndex].createdOn }}</small></h3>\n        </div>\n        <div class=\"page-header\">\n          <h3>Completed: <small>{{ todos[selectedIndex].completed }}</small></h3>\n        </div>\n      </div>\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -1163,6 +1179,7 @@ module.exports = "<div *ngIf=\"userId\">\n  <div class=\"flash-success\">\n    <
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_moment__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pipes_order_by_date_pipe__ = __webpack_require__("../../../../../src/app/pipes/order-by-date.pipe.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ngrx_store__ = __webpack_require__("../../../../@ngrx/store/@ngrx/store.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_socket_connection_service__ = __webpack_require__("../../../../../src/app/services/socket-connection.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1178,28 +1195,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var TodoListComponent = /** @class */ (function () {
-    function TodoListComponent(todoDataService, flashMessagesService, myFilter, store) {
+    function TodoListComponent(todoDataService, flashMessagesService, myFilter, store, socket) {
+        var _this = this;
         this.todoDataService = todoDataService;
         this.flashMessagesService = flashMessagesService;
         this.myFilter = myFilter;
         this.store = store;
+        this.socket = socket;
         this.todos = [];
         this.sortOrder = true; //true means newest, false means oldest
         //this is for now defined in two places  
         this.description = 'A list of things that one wants to get done or that need to get done.These are prioritized lists of all the tasks that you need to carry out.';
-        //Get user profile
+        //Get user profile from store
+        //if store empty get from session.
         this.data$ = this.store.select('user');
         this.data$.subscribe(function (user) {
-            console.log(user);
+            _this.user = user;
+            if (!user.userId) {
+                _this.user.userId = localStorage.getItem("userId");
+                _this.user.userName = localStorage.getItem("userName");
+                _this.user.email = localStorage.getItem("userEmail");
+                _this.user.name = localStorage.getItem("name");
+                //add a socket connection
+                _this.socket.joinChannel(_this.user);
+            }
         });
     }
     TodoListComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.user = JSON.parse(localStorage.getItem("user"));
+        // this.user = JSON.parse(localStorage.getItem("user"));
         this.userId = this.user['userId'];
         this.creationDate = __WEBPACK_IMPORTED_MODULE_3_moment__().subtract(1, 'days').format('DD/MM/YYYY');
-        //get the list of all todo for user 1 from api or local storage
+        //get the list of all todo for user from api or local storage
         if (localStorage.getItem("todos") === null) {
             this.obs = this.todoDataService.getToDos(this.user['userId'])
                 .subscribe(function (data) {
@@ -1358,82 +1387,10 @@ var TodoListComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_todo_data_service__["a" /* TodoDataService */],
             __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"],
             __WEBPACK_IMPORTED_MODULE_4__pipes_order_by_date_pipe__["a" /* OrderByDatePipe */],
-            __WEBPACK_IMPORTED_MODULE_5__ngrx_store__["a" /* Store */]])
+            __WEBPACK_IMPORTED_MODULE_5__ngrx_store__["a" /* Store */],
+            __WEBPACK_IMPORTED_MODULE_6__services_socket_connection_service__["a" /* SocketConnectionService */]])
     ], TodoListComponent);
     return TodoListComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/todo/todo.component.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/todo/todo.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<!-- todo component -->\n<div *ngIf=\"userId\">\n  <!-- <app-todo-list [user]=\"user\"></app-todo-list> -->\n</div>\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/todo/todo.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TodoComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngrx_store__ = __webpack_require__("../../../../@ngrx/store/@ngrx/store.es5.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var TodoComponent = /** @class */ (function () {
-    function TodoComponent(store) {
-        this.store = store;
-        //Get user profile
-        this.data$ = this.store.select('user');
-        this.data$.subscribe(function (user) {
-            console.log(user);
-        });
-    }
-    TodoComponent.prototype.ngOnInit = function () {
-        this.user = JSON.parse(localStorage.getItem("user"));
-        this.userId = this.user['userId'];
-    };
-    TodoComponent.prototype.ngOnDestroy = function () {
-    };
-    TodoComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-todo',
-            template: __webpack_require__("../../../../../src/app/components/todo/todo.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/components/todo/todo.component.css")]
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__ngrx_store__["a" /* Store */]])
-    ], TodoComponent);
-    return TodoComponent;
 }());
 
 
@@ -1487,6 +1444,88 @@ var OrderByDatePipe = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/redux-states/chat-users/chat-users-actions.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return USER_LOG_OUT; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return USER_LOG_IN; });
+/* unused harmony export ChatUsersAction */
+var USER_LOG_OUT = 'User Loged In';
+var USER_LOG_IN = 'User Loged Out';
+var ChatUsersAction = /** @class */ (function () {
+    function ChatUsersAction(type, payload) {
+        this.type = type;
+        this.payload = payload;
+    }
+    return ChatUsersAction;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/redux-states/chat-users/chat-users-reducer.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = loggedUserReducer;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__chat_users_actions__ = __webpack_require__("../../../../../src/app/redux-states/chat-users/chat-users-actions.ts");
+
+var initialState = {
+    userName: null,
+    userId: null,
+};
+function loggedUserReducer(state, action) {
+    if (state === void 0) { state = initialState; }
+    switch (action.type) {
+        case __WEBPACK_IMPORTED_MODULE_0__chat_users_actions__["a" /* USER_LOG_IN */]:
+            // Create a new state from payload
+            return [Object.assign({}, state, action.payload)];
+        case __WEBPACK_IMPORTED_MODULE_0__chat_users_actions__["b" /* USER_LOG_OUT */]:
+            return [Object.assign({}, initialState)];
+        default:
+            return [state];
+    }
+}
+;
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/redux-states/todos/todo-reducer.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = todoReducer;
+var initialState = [{
+        id: null,
+        userId: null,
+        title: null,
+        completed: null,
+        creationDate: null,
+        description: null,
+    }];
+function todoReducer(state, action) {
+    if (state === void 0) { state = initialState; }
+    return state;
+    // switch (action.type) {
+    // 	case ADD_TODO:
+    //          // Create a new state from payload
+    //          return Object.assign({}, state, action.payload);
+    // 	case DELETE_TODO:
+    // 	  return Object.assign({}, initialState);
+    // 	case EDIT_TODO:
+    // 	  return Object.assign({}, initialState);
+    // 	default:
+    // 	  return state;
+    // }
+}
+;
+
+
+/***/ }),
+
 /***/ "../../../../../src/app/redux-states/user/user-actions.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1521,16 +1560,31 @@ var initialState = {
     email: null,
     userId: null,
 };
+function setLocalStorage(data) {
+    if (typeof (Storage) !== "undefined") {
+        localStorage.setItem("userId", data.userId);
+        localStorage.setItem("userName", data.userName);
+        localStorage.setItem("userEmail", data.email);
+    }
+    else {
+        console.log('Sorry local storage not supported');
+    }
+}
+function removeLocalStorage() {
+    localStorage.removeItem("userId");
+    localStorage.removeItem("userName");
+    localStorage.removeItem("userEmail");
+}
 function userReducer(state, action) {
     if (state === void 0) { state = initialState; }
     switch (action.type) {
         case __WEBPACK_IMPORTED_MODULE_0__user_actions__["a" /* LOGIN */]:
-            console.log(action.payload, 'action');
-            console.log(state, 'state');
             // Create a new state from payload
+            setLocalStorage(action.payload);
             return Object.assign({}, state, action.payload);
         case __WEBPACK_IMPORTED_MODULE_0__user_actions__["b" /* LOGOUT */]:
-            return state;
+            removeLocalStorage();
+            return Object.assign({}, initialState);
         default:
             return state;
     }
@@ -1574,8 +1628,8 @@ var RegisterService = /** @class */ (function () {
         this.http = http;
         this.store = store;
         this.socket = socket;
-        this.testMode = true;
-        this.url = this.testMode ? 'http://localhost:3020/' : 'https://peaceful-wave-48941.herokuapp.com/';
+        this.testMode = false;
+        this.url = this.testMode ? 'http://localhost:3020/' : 'https://share-todo.herokuapp.com/';
     }
     /**
     * Register user
@@ -1699,8 +1753,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var SocketConnectionService = /** @class */ (function () {
     function SocketConnectionService() {
-        this.testMode = true;
-        this.url = this.testMode ? 'http://localhost:3020/' : 'https://peaceful-wave-48941.herokuapp.com/';
+        this.testMode = false;
+        this.url = this.testMode ? 'http://localhost:3020/' : 'https://share-todo.herokuapp.com/';
     }
     /**
     * Return the connected socket
@@ -1820,8 +1874,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var TodoDataService = /** @class */ (function () {
     function TodoDataService(http) {
         this.http = http;
-        this.testMode = true;
-        this.url = this.testMode ? 'http://localhost:3020/' : 'https://peaceful-wave-48941.herokuapp.com/';
+        this.testMode = false;
+        this.url = this.testMode ? 'http://localhost:3020/' : 'https://share-todo.herokuapp.com/';
     }
     /**
      * Get Todos for user, by default for user 1
@@ -1844,7 +1898,6 @@ var TodoDataService = /** @class */ (function () {
      * @returns Json
     **/
     TodoDataService.prototype.addTodo = function (todo) {
-        console.log(todo);
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         this.loadToken();
         headers.append('Authorization', this.authToken);
@@ -1871,7 +1924,6 @@ var TodoDataService = /** @class */ (function () {
      * @param number id
     */
     TodoDataService.prototype.deleteTodo = function (id) {
-        console.log(id);
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         this.loadToken();
         headers.append('Authorization', this.authToken);

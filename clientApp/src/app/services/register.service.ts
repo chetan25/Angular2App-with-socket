@@ -20,8 +20,8 @@ export class RegisterService {
     private store: Store<UserState>,
     private socket: SocketConnectionService
   ) { 
-    this.testMode = true;
-    this.url = this.testMode ? 'http://localhost:3020/' : 'https://peaceful-wave-48941.herokuapp.com/';
+    this.testMode = false;
+    this.url = this.testMode ? 'http://localhost:3020/' : 'https://share-todo.herokuapp.com/';
   }
   
   /** 

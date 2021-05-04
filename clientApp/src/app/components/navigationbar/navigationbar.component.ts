@@ -3,7 +3,7 @@ import { RegisterService } from '../../services/register.service';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { Router} from '@angular/router';
 import { SocketConnectionService } from '../../services/socket-connection.service';
-
+ 
 @Component({
   selector: 'app-navigationbar',
   templateUrl: './navigationbar.component.html',

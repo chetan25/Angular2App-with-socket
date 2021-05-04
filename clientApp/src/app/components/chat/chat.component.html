@@ -1,16 +1,19 @@
 <div *ngIf="users">
-  <div class="panel panel-default">
-    <div class="panel-heading">
+  <div class="panel panel-primary">
+    <div class="panel-heading panel-text">
       Logged In Users
     </div>
     <div class="panel-body">
       <div class="list-group">
-        <button
-          type="button"
+        <a
+          href="#"
           class="list-group-item"
           *ngFor="let user of users"
-          (click)="openChat(user)"
-        >{{ user.userName }}</button>
+          (click)="togglePermissions(user)"
+        >
+          <span class="panel-text">{{ user.userName }}</span>
+          <span class="permission-granted-text">Permission Granted</span>
+        </a>
       </div>
     </div>
   </div>

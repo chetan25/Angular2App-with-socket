@@ -1,5 +1,6 @@
-// socet connection for the port
+const TodoViewPermission = require('../models/permission');
 
+// socet connection for the port
 module.exports = function (server) {
   server.on('listening',function(){
     console.log('ok, server is running');
@@ -59,15 +60,19 @@ module.exports = function (server) {
 
     //Whenever someone disconnects this piece of code executed
     socket.on('disconnect', function () {
-      console.log(isLoggedIn);
+      console.log(isLoggedIn, 'user log in state');
+      console.log(users, 'logged users');
       if (!isLoggedIn) {
         var index = users.findIndex(function(element) {
           return userIdJoined === element.userId
         });
+        console.log(index, 'index');
         var userName;
         if (index >= 0) {
-          userName = users[index][userName];
-          users.splice(index, 1);  
+          userName = users[index].userName;
+          users.splice(index, 1);
+          console.log(userName);
+          console.log(users, 'left');
         }
         console.log('A user disconnected ' + userName);
         if (users.length > 0) {

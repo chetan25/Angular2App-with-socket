@@ -8,6 +8,7 @@ declare var $:any;
 import { Store } from '@ngrx/store';
 import { UserState, User } from '../../redux-states/user/user-state';
 import { Observable } from 'rxjs/Observable';
+import { SocketConnectionService } from '../../services/socket-connection.service';
 
 @Component({
   selector: 'app-todo-list',
@@ -41,20 +42,30 @@ export class TodoListComponent implements OnInit {
     private todoDataService: TodoDataService,
     private flashMessagesService: FlashMessagesService,
     private myFilter: OrderByDatePipe,
-    private store: Store<UserState>
+    private store: Store<UserState>,
+    private socket: SocketConnectionService
   ) {
-    //Get user profile
+    //Get user profile from store
+    //if store empty get from session.
     this.data$ = this.store.select('user');
     this.data$.subscribe((user:User) => {
-      console.log(user);
+      this.user = user;
+      if (!user.userId) {
+        this.user.userId = localStorage.getItem("userId");
+        this.user.userName = localStorage.getItem("userName");
+        this.user.email = localStorage.getItem("userEmail");
+        this.user.name = localStorage.getItem("name");
+        //add a socket connection
+        this.socket.joinChannel(this.user);
+      }
     });
   }
 
   ngOnInit() {
-     this.user = JSON.parse(localStorage.getItem("user"));
+   // this.user = JSON.parse(localStorage.getItem("user"));
     this.userId = this.user['userId'];
     this.creationDate = moment().subtract(1, 'days').format('DD/MM/YYYY');
-    //get the list of all todo for user 1 from api or local storage
+    //get the list of all todo for user from api or local storage
     if (localStorage.getItem("todos") === null) {
       this.obs = this.todoDataService.getToDos(this.user['userId'])
         .subscribe(data => {

@@ -1,8 +1,8 @@
 # compiled output
 /dist
 /tmp
-
-config/database.js
+#remove when pusing to heroku
+# config/database.js
 readme.md
 
 # dependencies

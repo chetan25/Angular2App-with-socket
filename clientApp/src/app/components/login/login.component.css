@@ -10,3 +10,11 @@
 .flash-error {
   margin-top: 2rem;
 }
+.page-header {
+  font-family: cursive;
+  color: darkcyan;	
+}
+.form-group {
+  font-family: cursive;
+  color: darkcyan;
+}

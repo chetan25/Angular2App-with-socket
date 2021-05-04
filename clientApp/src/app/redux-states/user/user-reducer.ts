@@ -8,15 +8,31 @@ const initialState:User = {
   userId: null,
 };
 
+function setLocalStorage(data) {
+  if (typeof(Storage) !== "undefined") {
+    localStorage.setItem("userId", data.userId);
+    localStorage.setItem("userName", data.userName);
+    localStorage.setItem("userEmail", data.email);
+  } else {
+    console.log('Sorry local storage not supported');
+  }
+}
+
+function removeLocalStorage() {
+  localStorage.removeItem("userId");
+  localStorage.removeItem("userName");
+  localStorage.removeItem("userEmail");
+}
+
 export function userReducer(state:User = initialState, action: UserActions):User {
 	switch (action.type) {
 		case LOGIN:
-          console.log(action.payload, 'action');
-          console.log(state, 'state')
           // Create a new state from payload
+          setLocalStorage(action.payload);
           return Object.assign({}, state, action.payload);
 		case LOGOUT:
-		  return state;
+		  removeLocalStorage();
+		  return Object.assign({}, initialState);
 		default:
 		  return state;
 	}

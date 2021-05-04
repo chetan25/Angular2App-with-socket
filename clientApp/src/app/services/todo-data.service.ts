@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Todo } from '../models/todo';
+import { Store } from '@ngrx/store';
+// import { TodoState, Todo } from '../redux-states/todos/todo-state';
+import { ADD_TODO, DELETE_TODO, EDIT_TODO, TodoAction } from '../redux-states/todos/todo-actions';
 
 @Injectable()
 export class TodoDataService {
@@ -9,8 +12,8 @@ export class TodoDataService {
   testMode:boolean;
   url:string;
   constructor(private http:Http) {
-   this.testMode = true;
-   this.url = this.testMode ? 'http://localhost:3020/' : 'https://peaceful-wave-48941.herokuapp.com/';
+   this.testMode = false;
+   this.url = this.testMode ? 'http://localhost:3020/' : 'https://share-todo.herokuapp.com/';
   }
 
  /**
@@ -38,7 +41,6 @@ export class TodoDataService {
    * @returns Json
   **/ 
   addTodo(todo:Array<any>) {
-    console.log(todo);
 	  let headers = new Headers();
     this.loadToken();
     headers.append('Authorization', this.authToken);
@@ -77,7 +79,6 @@ export class TodoDataService {
    * @param number id
   */
   deleteTodo(id: number) {
-    console.log(id);
     let headers = new Headers();
     this.loadToken();
     headers.append('Authorization', this.authToken);
