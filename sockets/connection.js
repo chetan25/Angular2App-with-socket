@@ -6,7 +6,7 @@ module.exports = function (server) {
     console.log('ok, server is running');
   });
   //initialize socket on that server 
-  const io = require('socket.io').listen(server);
+  const io = require('socket.io')(server);
   var users = [];
   var clientConnections = {};
  
@@ -29,7 +29,7 @@ module.exports = function (server) {
         userIdJoined = data['userId'];
         userName = data['userName'];
         console.log('user joined public room ' + data['userName']);
-      }
+      } 
       // emit a "message" event to every other socket using  socket.broadcast.emit
       // emit to every user using socket.emit
       io.to('public').emit("userOnPublicChannel", {
