@@ -4,7 +4,7 @@ const User = require('../models/user');
 const Todo = require('../models/todo');
 const passport = require('passport');
 const jwt = require('jsonwebtoken');
-const config = require('../config/database');
+require('dotenv').config();
 
 //Data
 router.post('/register', (req, res, next) => {
@@ -40,7 +40,7 @@ router.post('/login', (req, res, next) => {
               if (err) throw err;
 
                if  (isMatch) {
-	           	  const token = jwt.sign(user.toJSON(), config.secret, {
+	           	  const token = jwt.sign(user.toJSON(), process.env.SECRET, {
 	           	    expiresIn: 3600
 	              });
 	              res.json({success: true, token: "JWT " + token, user: {
