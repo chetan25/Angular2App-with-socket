@@ -6,13 +6,18 @@ module.exports = function (server) {
     console.log('ok, server is running');
   });
   //initialize socket on that server 
-  const io = require('socket.io')(server);
+  const { Server } = require("socket.io");
+  const io = new Server(server, {
+    allowEIO3: true 
+  });
+  // const io = require('socket.io')(server);
   var users = [];
   var clientConnections = {};
  
   /*||||||||||||||||SOCKET|||||||||||||||||||||||*/
   //Listen for connection
   io.on('connection', function (socket) {
+    console.log('user connected');
     var userIdJoined;
     var userName = null;
     var isLoggedIn = true;
